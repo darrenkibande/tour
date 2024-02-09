@@ -1,42 +1,42 @@
 :root{
   font-family: 'Quicksand', sans-serif;
-  --green400: #50DA08;
   --white: #ffffff;
-  --green700: #2D8407;
-  --green950: #1c1c1c;;
-  --secondaryColor: #C0FF96;
   --black: #000000;
+  --orange600: #ea580c;
+  --orange500: #f97316;
+  --orange50: #fff7ed;
+  --neutral200: #e5e5e5;
+  --gray800: #1f2937;
+  --gray700: #374151;
+  --violet700: #6d28d9;  
 
 }
 
 .App{
+  margin: 0;
   padding: 0;
   overflow: hidden;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Quicksand', sans-serif;
-/* font-family: 'Square Peg', cursive; */
-}
+ }
 
-body{
-  background: var(--white);
-  min-height: 100vh;    
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+body { 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav-icon{
+  font-size: 25px;
+  color: var(--gray800);
 }
 
+.logo-title{
+  font-size: 25px;
+  font-weight: 400;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bruno Ace', sans-serif;
+}
 
 .icon{
   font-size: 2rem;
@@ -53,7 +53,8 @@ code {
 }
 
 ::-webkit-scrollbar-thumb{
-  background: var(--green700);
+  background: var(--gray700);
   border-radius: 10px;
 }
+
 
