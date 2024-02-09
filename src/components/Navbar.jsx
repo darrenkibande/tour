@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './Navbar.css'
 import { SiYourtraveldottv } from "react-icons/si";
 import { LuShoppingCart } from "react-icons/lu";
 import { VscAccount } from "react-icons/vsc";
@@ -13,18 +13,18 @@ function Navbar() {
 
       <div className="nav-links">
         <ul className='ul-links'>
-        <li>Home</li>
-        <li>Pages</li>
-        <li>Destinations</li>
-        <li>Tours</li>
-        <li>Blog</li>
+        <li className='li-links'>Home</li>
+        <li className='li-links'>Pages</li>
+        <li className='li-links'>Destinations</li>
+        <li className='li-links'>Tours</li>
+        <li className='li-links'>Blog</li>
         </ul>
       </div>
 
       <div className="nav-icons">
-        <ul className='nav-links'>
-        <li> <LuShoppingCart className="nav-icon"/></li>
-        <li> <VscAccount className="nav-icon"/></li>
+        <ul className='ul-links'>
+        <li className='li-links'> <LuShoppingCart className="nav-icon"/></li>
+        <li className='li-links'> <VscAccount className="nav-icon"/></li>
         </ul>     
      
       </div>
