@@ -1,5 +1,5 @@
 import React from 'react'
-import '../components/'
+
 import { SiYourtraveldottv } from "react-icons/si";
 import { LuShoppingCart } from "react-icons/lu";
 import { VscAccount } from "react-icons/vsc";
