@@ -1,0 +1,15 @@
+.footer-container{
+    /* background: yellow; */
+    justify-content: center;
+    align-items: center;
+}
+
+.ft-top{
+   display: flex;
+   flex-direction: row;   
+}
+
+.ft-bottom span{
+   
+    
+}
