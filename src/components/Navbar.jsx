@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <div className="nav-container">
       <div className="logo">      
-      <p className='logo-title'> <SiYourtraveldottv className="nav-icon"/>  CHASLYM TOURS</p>
+      <p className='logo-title'> <SiYourtraveldottv className="nav-icon"/> CHASLYM TOURS</p>
       </div>
 
       <div className="nav-links">
