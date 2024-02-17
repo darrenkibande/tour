@@ -1,6 +1,7 @@
 .hero-container{
     display: flex;
     flex-direction: column;
+    padding-top: 2rem;
 }
 
 .hero-cont{
@@ -18,12 +19,12 @@
 }
 
 .float_div{
-    /* position:relative; */
-    background: var(--neutral200);
-    height: 10rem;
+    background: url("../assets/Contour\ Line.svg");
+    margin-top: 2rem;
+    height: 16rem;
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;   
 }
 
 .data_input{
@@ -34,8 +35,22 @@
 }
 
 .dt-inp{
-    width: 200px;
-    height: 30px;
+    width: 300px;
+    height: 35px;
+    color: var(--white);
+    font-weight: 600;
     border-color: var(--white);
-    border-radius: 10px;
+    border-style:solid;
+    border-width: 2px;
+    background: transparent;
+    text-indent: 5px;
+}
+
+.btn_hero{
+    width: max-content;
+    padding: 13px;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--white);
+    background: var(--orange500);
 }

@@ -21,11 +21,12 @@ function Hero() {
       </div>
       
         <div className="float_div">
+          {/* <p>Find Adventure That Suits Your Needs</p> */}
           <div className="data_input">
           <input type="text" name="" id="" placeholder='Where to?'className='dt-inp'/>
-          <input type="datetime" name="" id="" placeholder='Date from' className='dt-inp'/>
-          <input type="datetime" name="" id="" placeholder='Date to' className='dt-inp'/>
-          <input type="button" value="Find now" className='dt-inp' />
+          <input type="datetime" name="" id="" placeholder='When' className='dt-inp'/>
+          <input type="text" name="" id="" placeholder='Travel Type' className='dt-inp'/>
+          <input type="button" value="FIND NOW" className='btn_hero' />
           </div>
         </div>
     </div>   

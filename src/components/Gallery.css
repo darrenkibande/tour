@@ -7,20 +7,26 @@
 }
 
 .lt_side{
-    /* width: 50%; */
-    background-position: center;
-    background-size: contain;
+    width: 50%;
+    /* height: 450px; */
     /* background: green; */
 }
 
 .rt_side{
-    height: 10rem;
+    /* height: 450px; */
     width: 50%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
 
-.sm_img {
-    background: red;
+.sm_img{
+    height: 100%;
+    width: 100%;
+}
+
+.img_gal{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }
