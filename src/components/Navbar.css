@@ -1,8 +1,8 @@
 .nav-container{
     width: 100%;
-    position: relative;
-    /* position: fixed; */
-    /* background: var(--neutral200); */
+    /* position: relative; */
+    position: fixed;
+    background: var(--white);
 }
 
 .nav-container, .ul-links{

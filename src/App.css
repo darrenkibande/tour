@@ -60,4 +60,25 @@ body {
   border-radius: 10px;
 }
 
+.title_h1{
+  font-size: 2.5rem;
+  font-weight: 600;
+}
 
+.txt_cont{
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.btn{
+  background: var(--orange500);
+  border-radius: 10px;
+  color: var(--white);
+  border-color: var(--white);
+  font-size: 17px;
+  padding: 15px;
+}
+
+.btn:hover{
+  background: var(--orange600);
+}

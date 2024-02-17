@@ -14,7 +14,14 @@ function Navbar() {
       <div className="nav-links">
         <ul className='ul-links'>
         <li className='li-links'>Home</li>
-        <li className='li-links'>Pages</li>
+        <li className='li-links'>Pages
+        {/* <ul>
+          <li>About us</li>
+          <li>What we offer</li>
+          <li>Our team</li>
+          <li>Contact us</li>
+        </ul> */}
+        </li>
         <li className='li-links'>Destinations</li>
         <li className='li-links'>Tours</li>
         <li className='li-links'>Blog</li>

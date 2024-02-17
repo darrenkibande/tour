@@ -1,0 +1,26 @@
+.gallery_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 3rem;
+    gap: 10px;
+}
+
+.lt_side{
+    /* width: 50%; */
+    background-position: center;
+    background-size: contain;
+    /* background: green; */
+}
+
+.rt_side{
+    height: 10rem;
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.sm_img {
+    background: red;
+}

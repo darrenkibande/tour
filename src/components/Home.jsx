@@ -1,10 +1,14 @@
 import React from 'react'
-// import Navbar from './Navbar'
+import './Home.css'
+import Hero from './Hero'
+import Gallery from './Gallery'
+
 
 function Home() {
   return (
-    <div>
-      
+    <div className='home_container'>
+      <Hero/>
+      <Gallery/>
     </div>
   )
 }

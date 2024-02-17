@@ -1,0 +1,41 @@
+.hero-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-cont{
+    display: flex;
+    flex-direction: row;
+}
+
+.hero-lt{
+    padding-top: 9rem;
+    
+}
+
+.hero_img{
+    position: relative;
+}
+
+.float_div{
+    /* position:relative; */
+    background: var(--neutral200);
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.data_input{
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dt-inp{
+    width: 200px;
+    height: 30px;
+    border-color: var(--white);
+    border-radius: 10px;
+}
