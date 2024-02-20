@@ -1,0 +1,52 @@
+.hero-container{
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.video-css{
+    width: 100%;
+}
+
+.hero-txt{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    /* margin-top: ; */
+}
+
+.h-title{
+  font-family: "Water Brush", cursive;
+  font-weight: 400;
+  font-size: 5rem;
+  font-style: normal;
+  color: var(--white);
+}
+
+.h-subtle{
+    color: var(--white);
+    font-size: 2rem;
+    padding: 0;
+}
+
+.float-div{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.inp-sect{
+    /* margin-top: 4rem; */
+}
+
+.inp-items{
+
+}
+
+.inp-change{
+
+}
