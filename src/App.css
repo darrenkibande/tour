@@ -2,14 +2,14 @@
   font-family: 'Quicksand', sans-serif;
   --white: #ffffff;
   --black: #000000;
-  --orange600: #ea580c;
   --orange500: #f97316;
-  --orange50: #fff7ed;
+  --pink50: #fc32af;
   --neutral200: #e5e5e5;
   --gray800: #1f2937;
   --gray700: #374151;
-  --violet700: #6d28d9;  
-
+  --violet700: #be75d8;  
+  --brown: #d87b45;
+  --lavender: #cda7f2;
 }
 
 .App{
