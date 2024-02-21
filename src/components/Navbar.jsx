@@ -1,5 +1,7 @@
 import React from 'react'
 import './Navbar.css'
+import { Link } from 'react-router-dom';
+
 import { SiYourtraveldottv } from "react-icons/si";
 import { LuShoppingCart } from "react-icons/lu";
 import { VscAccount } from "react-icons/vsc";
@@ -13,25 +15,25 @@ function Navbar() {
 
       <div className="nav-links">
         <ul className='ul-links'>
-        <li className='li-links'>Home</li>
-        <li className='li-links'>Pages
+       <Link className='li-links' to='/home'> <li >Home</li> </Link> 
+        <Link className='li-links'><li>Pages
         {/* <ul>
           <li>About us</li>
           <li>What we offer</li>
           <li>Our team</li>
           <li>Contact us</li>
         </ul> */}
-        </li>
-        <li className='li-links'>Destinations</li>
-        <li className='li-links'>Tours</li>
-        <li className='li-links'>Blog</li>
+        </li></Link>
+        <Link className='li-links'><li>Destinations</li></Link>
+        <Link className='li-links'><li>Tours</li></Link>
+        <Link className='li-links'><li>Blog</li></Link>
         </ul>
       </div>
 
       <div className="nav-icons">
         <ul className='ul-links'>
-        <li className='li-links'> <LuShoppingCart className="nav-icon"/></li>
-        <li className='li-links'> <VscAccount className="nav-icon"/></li>
+        <Link className='li-links'><li> <LuShoppingCart className="nav-icon"/></li></Link>
+        <Link className='li-links'><li> <VscAccount className="nav-icon"/></li></Link>
         </ul>     
      
       </div>

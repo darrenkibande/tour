@@ -7,12 +7,16 @@ function Safaris() {
   return (
    <div className="safari_container">
     <div className="safari_title">
-        <p>Explore the World for Yourself</p>
+        <p className='div-title'>Explore the World for Yourself</p>
     </div>
 
     <div className="safari_box">
         <div className="saf_gal">
           <img src={pic1} alt="" className='img_gal'/>
+          <div className="gal-cont">
+            <p>Lorem, ipsum dolor.</p>
+            <p>Lorem, ipsum dolor.</p>
+          </div>
         </div>
         <div className="saf_gal">
         <img src={pic1} alt="" className='img_gal'/>
@@ -31,12 +35,6 @@ function Safaris() {
         </div>
         <div className="saf_gal">
         <img src={pic1} alt="" className='img_gal'/>   
-        </div>
-        <div className="saf_gal">
-        <img src={pic1} alt="" className='img_gal'/>  
-        </div>
-        <div className="saf_gal">
-        <img src={pic1} alt="" className='img_gal'/>  
         </div>
         <div className="saf_gal">
         <img src={pic1} alt="" className='img_gal'/>  

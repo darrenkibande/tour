@@ -2,6 +2,8 @@ import React from 'react'
 import './Hero.css'
 import video from '../assets/video.mp4'
 
+import { CiSearch } from "react-icons/ci";
+
 function Hero() {
   return (
     <div className="hero-container">
@@ -10,9 +12,9 @@ function Hero() {
         </div>
 
         <div className="hero-txt">
-          <h1 className='h-title'>Unlock your travel dreams with us.</h1>
+          <p className='h-title'>Unlock your travel dreams with us.</p>
           <p className='h-subtle'>Discover the worlds most adventurous nature</p>
-          <button></button>
+          <button className='btn'>Find out more</button>
         </div>
 
         <div className="float-div">
@@ -22,7 +24,7 @@ function Hero() {
               <input type="text" name="" id="" placeholder='Where to?'className='inp-change'/>
               <input type="date" name="" id="" placeholder='When?' className='inp-change'/>
               <input type="text" name="" id="" placeholder='Travel type?'className='inp-change'/>
-              <button className='btn'>Search</button>
+              <button className='btn'><CiSearch className='icon-oth'/> Search</button>
             </div>
           </div>
         </div>

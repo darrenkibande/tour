@@ -5,7 +5,7 @@
 
 .safari_box{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     width: 100%;
     /* gap: 3px; */
 }
@@ -18,8 +18,13 @@
     padding: 10px;
 }
 
-.img_gal:hover{
-    zoom: 2;
-    cursor: pointer;
-    transition: 0.3s ease-out;
+.img_gal{
+    z-index: 1;
 }
+
+.gal-cont{
+    background: yellow;
+    z-index: 5;
+    /* position: abso; */
+}
+
