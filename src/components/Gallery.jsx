@@ -7,8 +7,20 @@ import pic3 from '../assets/elizeu-dias-SEq9dyZSe6c-unsplash.jpg'
 function Gallery() {
   return (
     <div className="gallery_container">
-        <div className="lt_side">
+
+      <div className="gallery-title">
+        <p className='title_h1'>Featured Tours</p>
+        <p className='div-title'>Beautiful Places Arround The World </p>
+      </div>
+
+      <div className="img-dom">
+
+        <div className="lt_side">         
            <img src={pic1} alt="" className='img_gal'/>
+
+           {/* <div className="in-img">
+            <p className='in-float-img'> Discover Africa</p>
+            </div> */}
         </div>
 
         <div className="rt_side">
@@ -23,6 +35,8 @@ function Gallery() {
           </div>
           <div className="sm_img">
             <img src={pic3} alt="" className='img_gal' /></div>           
+        </div>
+
         </div>
     </div>
   )

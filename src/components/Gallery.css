@@ -1,9 +1,17 @@
 .gallery_container{
+    padding-top: 4rem;
+}
+
+.img-dom{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 3rem;
     gap: 10px;
+}
+
+.gallery-title{
+    text-align: center;
+    line-height: 10px;
 }
 
 .lt_side{
@@ -28,5 +36,7 @@
 .img_gal{
     width: 100%;
     height: 100%;
+    border-radius: 10px;
     /* object-fit: fill; */
 }
+
