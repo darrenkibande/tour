@@ -36,3 +36,30 @@
 .nav-icons{
     flex: 0.1;
 }
+
+.dropdown{
+    display: none;
+    text-decoration: none;
+    list-style: none;
+    float: left;
+    /* left: -20px; */
+    position: absolute;
+    top: 100%;
+    overflow: hidden;
+    background: var(--white);
+    padding: 1rem;
+    transition: display 0.3s ease;
+    /* z-index: 5; */
+}
+
+.dropdown li{
+    display: none;
+    /* overflow: hidden; */
+
+}
+
+.dropdown li:hover{
+    display: block;
+    /* z-index: 6; */
+}
+

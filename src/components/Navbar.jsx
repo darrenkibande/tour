@@ -17,12 +17,12 @@ function Navbar() {
         <ul className='ul-links'>
        <Link className='li-links' to='/home'> <li >Home</li> </Link> 
         <Link className='li-links'><li>Pages
-        {/* <ul>
+        <ul className='dropdown'>
           <li>About us</li>
           <li>What we offer</li>
           <li>Our team</li>
           <li>Contact us</li>
-        </ul> */}
+        </ul>
         </li></Link>
         <Link className='li-links'><li>Destinations</li></Link>
         <Link className='li-links'><li>Tours</li></Link>
