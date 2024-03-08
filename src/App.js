@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
+import Register from './components/Register';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Routes>
         <Route index element={<Home/>}></Route>
         <Route exact path='/home' element={<Home/>}></Route>
+        <Route exact path='/Register' element={<Register/>}></Route>
+        <Route exact path='/Login' element={<Login/>}></Route>
         {/* <Route exact path='/about' element={<AboutUs/>}></Route>
         <Route exact path='/services' element={<Services/>}></Route>
         <Route exact path='/gallery' element={<Gallery/>}></Route>

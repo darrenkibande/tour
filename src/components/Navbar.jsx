@@ -33,7 +33,7 @@ function Navbar() {
       <div className="nav-icons">
         <ul className='ul-links'>
         <Link className='li-links'><li> <LuShoppingCart className="nav-icon"/></li></Link>
-        <Link className='li-links'><li> <VscAccount className="nav-icon"/></li></Link>
+        <Link className='li-links' to='/register'><li> <VscAccount className="nav-icon"/></li></Link>
         </ul>     
      
       </div>
