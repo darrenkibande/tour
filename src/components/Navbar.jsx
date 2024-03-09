@@ -16,12 +16,13 @@ function Navbar() {
       <div className="nav-links">
         <ul className='ul-links'>
        <Link className='li-links' to='/home'> <li >Home</li> </Link> 
-        <Link className='li-links'><li>Pages
+        <Link className='li-links'><li className='drop-menu'>Pages
         <ul className='dropdown'>
-          <li>About us</li>
-          <li>What we offer</li>
-          <li>Our team</li>
-          <li>Contact us</li>
+          <Link><li>About Us</li></Link>
+          <Link><li>What We Offer</li></Link>
+          <Link><li>Our Team</li></Link>
+          <Link><li>Contact Us</li></Link>
+          <Link><li>FAQ Page</li></Link>
         </ul>
         </li></Link>
         <Link className='li-links'><li>Destinations</li></Link>

@@ -26,6 +26,7 @@ function Register() {
   };
 
   return (
+    <div className="register-cont">
     <form className="registration-form" onSubmit={handleSubmit}>
       <p className="title">Register</p>
       <p className="message">Signup now and get full access to our app.</p>
@@ -58,6 +59,7 @@ function Register() {
       <p className="signin">Already have an account? <Link to='/Login'> Sign in </Link>  </p>
 
     </form>
+    </div>
   );
 }
 
