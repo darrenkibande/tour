@@ -3,6 +3,7 @@
     padding: 4rem;
     justify-content: center;
     align-items: center;
+    /* margin-top: 3rem; */
 }
 
 .ft-top{
@@ -22,6 +23,7 @@
 .li-ftlinks{
     list-style: none;
     color: var(--white);
+    text-decoration: none;
 }
 
 .ul-ftlinks{

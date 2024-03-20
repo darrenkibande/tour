@@ -1,0 +1,17 @@
+.about-container{
+    margin-top: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 3rem;
+}
+
+.about-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.content-grid{
+    height: 30rem;
+    /* background: yellow; */
+}

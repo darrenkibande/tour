@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import { Link } from 'react-router-dom';
 import { CiFacebook } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 import { CiLinkedin } from "react-icons/ci";
@@ -19,20 +20,20 @@ function Footer() {
     Get the best out adventure activities in you and start living the moment.
     </p>
     <ul className='ftlinks'>
-      <li className='li-ftlinks'><CiFacebook className='icon-oth'/></li>
-      <li className='li-ftlinks'><FaXTwitter className='icon-oth'/></li>
-      <li className='li-ftlinks'><CiLinkedin className='icon-oth'/></li>
-      <li className='li-ftlinks'><FaInstagram className='icon-oth'/></li>
+      <Link className='li-ftlinks'><li><CiFacebook className='icon-oth'/></li></Link>
+      <Link className='li-ftlinks'><li><FaXTwitter className='icon-oth'/></li></Link>
+      <Link className='li-ftlinks'><li><CiLinkedin className='icon-oth'/></li></Link>
+      <Link className='li-ftlinks'><li><FaInstagram className='icon-oth'/></li></Link>
     </ul>
     </div>
 
     <div className="mid-side">
     <span className='ft-txt'>Useful links</span>
     <ul className='ul-ftlinks'>
-      <li className='li-ftlinks'>Home</li>
-      <li className='li-ftlinks'>About</li>
-      <li className='li-ftlinks'>Blog</li>
-      <li className='li-ftlinks'>Contact</li>
+      <Link className='li-ftlinks' to='/Home'><li>Home</li></Link>
+      <Link className='li-ftlinks' to='/About us'><li>About</li></Link>
+      <Link className='li-ftlinks' to='/Blogs'><li>Blog</li></Link>
+      <Link className='li-ftlinks' to='/Contact us'><li>Contact</li></Link>
     </ul>
     </div>
 

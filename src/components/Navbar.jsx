@@ -15,26 +15,26 @@ function Navbar() {
 
       <div className="nav-links">
         <ul className='ul-links'>
-       <Link className='li-links' to='/home'> <li >Home</li> </Link> 
+       <Link className='li-links' to='/Home'> <li >Home</li> </Link> 
         <Link className='li-links'><li className='drop-menu'>Pages
         <ul className='dropdown'>
-          <Link><li>About Us</li></Link>
-          <Link><li>What We Offer</li></Link>
-          <Link><li>Our Team</li></Link>
-          <Link><li>Contact Us</li></Link>
-          <Link><li>FAQ Page</li></Link>
+          <Link className='li-links' to='/About us'><li>About Us</li></Link>
+          <Link className='li-links' to='/home'><li>What We Offer</li></Link>
+          <Link className='li-links' to='/Our team'><li>Our Team</li></Link>
+          <Link className='li-links' to='/Contact us'><li>Contact Us</li></Link>
+          <Link className='li-links' to='/Faq'><li>FAQ Page</li></Link>
         </ul>
         </li></Link>
-        <Link className='li-links'><li>Destinations</li></Link>
-        <Link className='li-links'><li>Tours</li></Link>
-        <Link className='li-links'><li>Blog</li></Link>
+        <Link className='li-links' to='/Destination'><li>Destinations</li></Link>
+        <Link className='li-links'to='/Tours'><li>Tours</li></Link>
+        <Link className='li-links'to='/Blogs'><li>Blog</li></Link>
         </ul>
       </div>
 
       <div className="nav-icons">
         <ul className='ul-links'>
         <Link className='li-links'><li> <LuShoppingCart className="nav-icon"/></li></Link>
-        <Link className='li-links' to='/register'><li> <VscAccount className="nav-icon"/></li></Link>
+        <Link className='li-links' to='/Register'><li> <VscAccount className="nav-icon"/></li></Link>
         </ul>     
      
       </div>

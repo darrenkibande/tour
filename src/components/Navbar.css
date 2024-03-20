@@ -43,7 +43,7 @@
     list-style: none;
     float: left;
     position: absolute;
-    top: 100%;
+    top: 50px;
     background: var(--white);
     padding: 1rem;
     transition: display 0.3s ease;
