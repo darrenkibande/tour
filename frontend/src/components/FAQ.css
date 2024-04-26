@@ -1,0 +1,102 @@
+ .faq-section{
+    /* margin-top: 6rem; */
+  }
+
+  .container-title{
+    text-align: center;
+    margin-top: 3rem;
+    height: 22rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url("../assets/peter-conlan-LEgwEaBVGMo-unsplash.jpg");
+    background-attachment: fixed;
+    background-blend-mode: color;
+    background-size: cover;
+  }
+
+  .accordions {
+    max-width: 80%;
+    margin: auto;
+    padding-bottom: 4rem;
+  }
+  
+  .accordion .accordion__title {
+    display: block;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: var(--white);
+    border-bottom: 1px solid #0002;
+    padding: 20px 10px;
+    color: var(--dark);
+    margin-top: 10px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+
+    .faq-icon{
+    padding-left: 5px;
+    }
+  }
+  
+  .accordion .accordion__title input {
+    appearance: none;
+  }
+  
+  .accordion .accordion__title:after {
+    transition: all 0.25s ease;
+    font-weight: 900;
+    float: right;
+    margin-right: 10px;
+  }
+  
+  .accordion .accordion__title:has(input:checked):after {
+    font-weight: 900;
+    float: right;
+    margin-right: 10px;
+  }
+  
+  .accordion .accordion__text {
+    overflow: hidden;
+    max-height: 0;
+    background-color: var(--gray-light);
+    filter: contrast(.9);
+    transition: all .5s ease-in-out;
+    font-weight: 400;
+  }
+  
+  .accordion .accordion__text p {
+    font-weight: 100;
+    line-height: 1.5rem;
+    padding: 10px 10px;
+    color: var(--gray-dark);  
+  }
+  
+  .accordion .accordion__title:has(input:checked) {
+    color: var(--green-light);
+  }
+  
+  .accordion .accordion__title:has(input:checked) + .accordion__text {
+    max-height: 200px;
+  }
+  
+  .mt-2 {
+    margin-top: 20px;
+  }
+  
+  .my-1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  
+  @keyframes live {
+    0% {
+      scale: .7;
+    }
+    100% {
+      scale: .72;
+    }
+  }
+  

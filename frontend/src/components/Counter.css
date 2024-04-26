@@ -1,0 +1,40 @@
+
+.cont{
+    margin-top: 3rem;
+    height: 22rem;
+    /* margin-bottom: 3rem; */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    background: url("../assets/peter-conlan-LEgwEaBVGMo-unsplash.jpg");
+    background-attachment: fixed;
+    background-blend-mode: color;
+    background-size: cover;
+  }
+  .counter-container {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 50px;
+  }
+  
+  .counter {
+    font-size: 60px;
+    margin-top: 10px;
+    color: var(--white);
+  }
+  
+  .count-txt{
+    color: var(--white);
+    font-size: 17px;
+  font-weight: 500;
+  }
+
+  @media (max-width: 580px) {
+    body {
+      flex-direction: column;
+    }
+  }
+  

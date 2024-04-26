@@ -1,0 +1,104 @@
+:root{
+  font-family: 'Quicksand', sans-serif;
+  --white: #ffffff;
+  --black: #000000;
+  --orange500: #f97316;
+  --pink50: #fc32af;
+  --neutral200: #e5e5e5;
+  --gray800: #1f2937;
+  --gray700: #374151;
+  --violet700: #be75d8;  
+  --brown: #d87b45;
+  --lavender: #cda7f2;
+}
+
+.App{
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+ }
+
+body { 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-icon{
+  font-size: 25px;
+  color: var(--gray800);
+}
+
+.logo-title{
+  font-size: 25px;
+  font-weight: 400;
+  font-family: 'Bruno Ace', sans-serif;
+}
+
+.icon{
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.icon-oth{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* -------custom scrollbar----------- */
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--gray700);
+  border-radius: 10px;
+}
+
+.title_h1{
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--gray800);
+}
+
+.txt_cont{
+  font-size: 17px;
+  font-weight: 500;
+  text-align: justify;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+
+.txt_p{
+  font-size: 18px;
+  font-weight: 500;
+  text-align: justify;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+
+.btn{
+  background: var(--orange500);
+  border-radius: 5px;
+  color: var(--white);
+  border-color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px;
+  border-style: none;
+  /* box-shadow: none; */
+}
+
+.banner-title{
+  font-family: "Limelight", sans-serif;
+    font-weight: 500;
+    color: var(--white);
+    font-style: normal;
+    font-size: 3rem;  
+    text-align: center;
+}

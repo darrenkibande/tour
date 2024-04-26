@@ -1,0 +1,30 @@
+.safari_container{
+    /* background: yellow; */
+
+}
+
+.safari_box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    /* gap: 3px; */
+}
+
+.saf_gal{
+    width: 25% auto;
+    height: 350px;
+    /* background: green; */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.img_gal{
+    z-index: 1;
+}
+
+.gal-cont{
+    background: yellow;
+    z-index: 5;
+    /* position: abso; */
+}
+

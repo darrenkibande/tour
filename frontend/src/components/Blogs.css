@@ -1,0 +1,12 @@
+.blog-sect{
+    margin-top: 3rem;
+    height: 22rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url("../assets/peter-conlan-LEgwEaBVGMo-unsplash.jpg");
+    background-attachment: fixed;
+    background-blend-mode: color;
+    background-size: cover;
+}
