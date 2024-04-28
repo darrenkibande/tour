@@ -1,6 +1,6 @@
 const express = require('express');
-const userRoutes = require('./routes/userRoutes');
-const otherRoutes = require('./routes/otherRoutes');
+const destinationRoutes = require('./routes/destinationRoutes');
+// const otherRoutes = require('./routes/otherRoutes');
 
 const app = express();
 
@@ -8,8 +8,8 @@ const app = express();
 app.use(express.json());
 
 // Routes
-app.use('/api/users', userRoutes);
-app.use('/api/other', otherRoutes);
+app.use('/api/destinations', destinationRoutes);
+// app.use('/api/other', otherRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
