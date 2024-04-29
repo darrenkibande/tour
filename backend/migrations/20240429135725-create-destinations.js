@@ -9,30 +9,32 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      dest_name: {
-        type: Sequelize.STRING(25),
-        allowNull: false
+      destination_name: {
+        type: Sequelize.STRING
       },
-      description_1: {
-        type: Sequelize.STRING(225),
-        allowNull: false
+      destination_title1: {
+        type: Sequelize.STRING
       },
-      description_2: {
-        type: Sequelize.STRING(225),
-        allowNull: false
+      description1: {
+        type: Sequelize.STRING
       },
-      dest_heading_1: {
-        type: Sequelize.STRING(20),
-        allowNull: false
+      destination_title2: {
+        type: Sequelize.STRING
       },
-      dest_heading_2: {
-        type: Sequelize.STRING(20),
-        allowNull: false
+      description2: {
+        type: Sequelize.STRING
       },
       image_preview: {
         type: Sequelize.BLOB
       },
-      
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      }
     });
   },
   async down(queryInterface, Sequelize) {

@@ -1,5 +1,5 @@
 const express = require('express');
-const destinationRoutes = require('./routes/destinationRoutes');
+// const destinationRoutes = require('./routes/destinationRoutes');
 // const otherRoutes = require('./routes/otherRoutes');
 
 const app = express();
@@ -8,10 +8,10 @@ const app = express();
 app.use(express.json());
 
 // Routes
-app.use('/api/destinations', destinationRoutes);
+// app.use('/api/destinations', destinationRoutes);
 // app.use('/api/other', otherRoutes);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

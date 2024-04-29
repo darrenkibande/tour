@@ -25,7 +25,7 @@ function Navbar() {
           <Link className='li-links' to='/Faq'><li>FAQ Page</li></Link>
         </ul>
         </li></Link>
-        <Link className='li-links' to='/Destination'><li>Destinations</li></Link>
+        <Link className='li-links' to='/destinations'><li>Destinations</li></Link>
         <Link className='li-links'to='/Tours'><li>Tours</li></Link>
         <Link className='li-links'to='/Blogs'><li>Blog</li></Link>
         </ul>
