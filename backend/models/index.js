@@ -23,13 +23,18 @@ fs
       file.indexOf('.') !== 0 &&
       file !== basename &&
       file.slice(-3) === '.js' &&
-      file.indexOf('.test.js') === -1
+      file.indexOf('.test.js') === -1&&
+      file !== 'destinations.js'////////////////////////////
     );
   })
   .forEach(file => {
     const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
     db[model.name] = model;
   });
+
+  const destinations = require('./destinations')(sequelize, Sequelize.DataTypes);
+db[destinations.name] = destinations;
+/////////////////////////////////////////////
 
 Object.keys(db).forEach(modelName => {
   if (db[modelName].associate) {

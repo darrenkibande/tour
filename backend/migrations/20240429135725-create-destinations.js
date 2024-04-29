@@ -10,31 +10,30 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       destination_name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(30),
+        allowNull: false
       },
       destination_title1: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(30),
+        allowNull: false
       },
       description1: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(225),
+        allowNull: false
       },
       destination_title2: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(30),
+        allowNull: false
       },
       description2: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(225),
+        allowNull: false
       },
       image_preview: {
-        type: Sequelize.BLOB
+        type: Sequelize.BLOB,
+        allowNull: false
       },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      }
+      
     });
   },
   async down(queryInterface, Sequelize) {

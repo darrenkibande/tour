@@ -11,7 +11,7 @@ function Destinations() {
 
   const fetchDestinations = async () => {
     try {
-      const response = await axios.get('/api/destinations');
+      const response = await axios.get('/destinations');
       setDestinations(response.data);
     } catch (error) {
       console.error('Error fetching destinations:', error);
@@ -38,7 +38,7 @@ function Destinations() {
             {/* Render your destination content here */}
             <img src={destination.image_preview} alt="" className='img_gal' />
             <div className="in-img">
-              <p className='in-float-img'>{destination.dest_name}</p>
+              <p className='in-float-img'>{destination.destination_name}</p>
             </div>
           </div>
         ))}
