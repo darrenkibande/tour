@@ -8,7 +8,7 @@ function Destinations() {
   useEffect(() => {
     const fetchDestinations = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/destinations');
+        const response = await axios.get('./destinations');
         setDestinations(response.data);
       } catch (error) {
         console.error('Error fetching destinations:', error);

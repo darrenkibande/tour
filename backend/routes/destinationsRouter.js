@@ -1,13 +1,9 @@
-// routes/destinations.js
 const express = require('express');
 const router = express.Router();
-const destinationsController = require('../controllers/destinationsController');
+const { getAllDestinations, getDestinationById } = require('../controllers/destinationsController');
 
-// Routes for handling CRUD operations
-router.get('/', destinationsController.getAllDestinations);
-router.get('/:id', destinationsController.getDestinationById);
-router.post('/', destinationsController.createDestination);
-router.put('/:id', destinationsController.updateDestination);
-router.delete('/:id', destinationsController.deleteDestination);
+// Routes for fetching data (GET requests only)
+router.get('/', getAllDestinations); // Get all destinations
+router.get('/:id', getDestinationById); // Get destination by ID
 
 module.exports = router;
