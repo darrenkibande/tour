@@ -19,11 +19,11 @@ module.exports = (sequelize, DataTypes) => {
     description1: DataTypes.STRING,
     destination_title2: DataTypes.STRING,
     description2: DataTypes.STRING,
-    image_preview: DataTypes.BLOB
+    image_preview: DataTypes.BLOB('medium')
   }, {
     sequelize,
     modelName: 'destinations',
-    timestamps: false
+    timestamps:false
   });
   return destinations;
 };

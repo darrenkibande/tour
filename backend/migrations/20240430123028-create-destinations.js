@@ -30,10 +30,9 @@ module.exports = {
         allowNull: false
       },
       image_preview: {
-        type: Sequelize.BLOB,
-        allowNull: false
+        type: Sequelize.BLOB('medium')
       },
-      
+     
     });
   },
   async down(queryInterface, Sequelize) {

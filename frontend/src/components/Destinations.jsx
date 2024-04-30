@@ -6,17 +6,17 @@ function Destinations() {
   const [destinations, setDestinations] = useState([]);
 
   useEffect(() => {
+    const fetchDestinations = async () => {
+      try {
+        const response = await axios.get('http://localhost:8080/destinations');
+        setDestinations(response.data);
+      } catch (error) {
+        console.error('Error fetching destinations:', error);
+      }
+    };
+
     fetchDestinations();
   }, []); // Empty dependency array to fetch data once on component mount
-
-  const fetchDestinations = async () => {
-    try {
-      const response = await axios.get('/destinations');
-      setDestinations(response.data);
-    } catch (error) {
-      console.error('Error fetching destinations:', error);
-    }
-  };
 
   return (
     <div className="dest-container">    
