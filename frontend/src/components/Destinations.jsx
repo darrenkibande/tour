@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './Destinations.css';
-import axios from 'axios';
 
 function Destinations() {
   const [destinations, setDestinations] = useState([]);
@@ -8,8 +7,12 @@ function Destinations() {
   useEffect(() => {
     const fetchDestinations = async () => {
       try {
-        const response = await axios.get('./destinations');
-        setDestinations(response.data);
+        const response = await fetch('http://localhost:8080/destinations');
+        if (!response.ok) {
+          throw new Error('Failed to fetch destinations');
+        }
+        const data = await response.json();
+        setDestinations(data);
       } catch (error) {
         console.error('Error fetching destinations:', error);
       }
@@ -36,7 +39,8 @@ function Destinations() {
         {destinations.map(destination => (
           <div className="dest_gallery" key={destination.id}>
             {/* Render your destination content here */}
-            <img src={destination.image_preview} alt="" className='img_gal' />
+            <img src={URL.createObjectURL(new Blob([destination.image_preview]))} alt='' className='img_gal' />
+
             <div className="in-img">
               <p className='in-float-img'>{destination.destination_name}</p>
             </div>

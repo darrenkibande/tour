@@ -32,7 +32,7 @@ fs
     db[model.name] = model;
   });
 
-  const destinations = require('./destinations')(sequelize, Sequelize.DataTypes);
+  const destinations = require('./destinations.js')(sequelize, Sequelize.DataTypes);
 db[destinations.name] = destinations;
 /////////////////////////////////////////////
 

@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     description1: DataTypes.STRING,
     destination_title2: DataTypes.STRING,
     description2: DataTypes.STRING,
-    image_preview: DataTypes.BLOB('medium')
+    image_preview: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'destinations',

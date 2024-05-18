@@ -10,21 +10,8 @@ const getAllDestinations = async (req, res) => {
   }
 };
 
-// Get destination by ID
-const getDestinationById = async (req, res) => {
-  const { id } = req.params;
-  try {
-    const destination = await destinations.findByPk(id);
-    if (!destination) {
-      return res.status(404).json({ message: 'Destination not found' });
-    }
-    res.json(destination);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-};
+
 
 module.exports = {
-  getAllDestinations,
-  getDestinationById
+  getAllDestinations
 };

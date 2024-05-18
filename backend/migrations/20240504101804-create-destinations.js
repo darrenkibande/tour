@@ -18,7 +18,7 @@ module.exports = {
         allowNull: false
       },
       description1: {
-        type: Sequelize.STRING(225),
+        type: Sequelize.STRING(255),
         allowNull: false
       },
       destination_title2: {
@@ -26,13 +26,14 @@ module.exports = {
         allowNull: false
       },
       description2: {
-        type: Sequelize.STRING(225),
+        type: Sequelize.STRING(255),
         allowNull: false
       },
       image_preview: {
-        type: Sequelize.BLOB('medium')
+        type: Sequelize.STRING,
+        allowNull: false
       },
-     
+      
     });
   },
   async down(queryInterface, Sequelize) {
