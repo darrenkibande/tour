@@ -52,10 +52,11 @@
   }
   
   .in-float-imgtxt {
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background for better text visibility */
-    color: white; /* Text color */
-    padding: 10px; /* Padding for the text */
-    border-radius: 5px; /* Optional: Rounded corners for the background */
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    padding: 10px; 
+    border-radius: 5px; 
+    font-size: 28px;
   }
   
 
