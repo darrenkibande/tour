@@ -19,7 +19,7 @@ function Destinations() {
     };
 
     fetchDestinations();
-  }, []); // Empty dependency array to fetch data once on component mount
+  }, []);
 
   return (
     <div className="dest-container">    
@@ -34,13 +34,10 @@ function Destinations() {
         <p className='txt_cont' style={{fontSize:'0.9em'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam blanditiis earum modi maiores excepturi, cumque magnam error nulla dignissimos quae perspiciatis quis voluptates facere quaerat quod cum aut minima.</p>
       </div>
 
-      {/* Render destination boxes */}
       <div className="dest_box">
         {destinations.map(destination => (
-          <div className="dest_gallery" key={destination.id}>
-            {/* Render your destination content here */}
-            <img src={URL.createObjectURL(new Blob([destination.image_preview]))} alt='' className='img_gal' />
-
+          <div className="dest_gallery" key={destination.destination_id}>
+            <img src={`http://localhost:8080/${destination.image_preview}`} alt={destination.destination_name} className='img_gal' />
             <div className="in-img">
               <p className='in-float-img'>{destination.destination_name}</p>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Blogs.css'
+import AdminDestination from './AdminDestination'
 
 function Blogs() {
   return (
@@ -7,6 +8,7 @@ function Blogs() {
     <div className="blog-sect">     
         <p className="banner-title">Blog</p>
     </div>
+    <AdminDestination/>
     </div>
   )
 }

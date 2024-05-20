@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const multer = require('multer');
+const path = require('path');
 const destinationsRouter = require ('./routes/destinationsRouter.js')
 
 const app = express();
@@ -10,8 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 
-// Multer setup for file uploads
-const upload = multer({ dest: 'uploads/' });
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Routes
 app.use('/destinations', destinationsRouter);
