@@ -37,9 +37,9 @@ function Destinations() {
       <div className="dest_box">
         {destinations.map(destination => (
           <div className="dest_gallery" key={destination.destination_id}>
-            <img src={`http://localhost:8080/${destination.image_preview}`} alt={destination.destination_name} className='img_gal' />
-            <div className="in-img">
-              <p className='in-float-img'>{destination.destination_name}</p>
+            <img src={`http://localhost:8080/${destination.image_preview}`} alt={destination.destination_name} className='dest_img' />
+            <div className="in-imgtxt">
+              <p className='in-float-imgtxt'>{destination.destination_name}</p>
             </div>
           </div>
         ))}
