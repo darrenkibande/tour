@@ -19,7 +19,10 @@ module.exports = (sequelize, DataTypes) => {
     description1: DataTypes.STRING,
     destination_title2: DataTypes.STRING,
     description2: DataTypes.STRING,
-    image_preview: DataTypes.STRING
+    image_preview: DataTypes.STRING,
+    image1: DataTypes.STRING,
+    image2: DataTypes.STRING,
+    image3: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'destinations',

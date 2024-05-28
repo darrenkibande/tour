@@ -33,6 +33,18 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
+      image1: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      image2: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      image3: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       
     });
   },

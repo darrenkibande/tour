@@ -1,12 +1,57 @@
-.banner_tour{
-    /* margin-top: 3rem; */
+.destinfo-container {
+    /* Your existing styles */
+  }
+  
+  .banner-destinfo {
     height: 22rem;
+    width: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background: url("../assets/peter-conlan-LEgwEaBVGMo-unsplash.jpg");
+    overflow: hidden;    
+    /* background-attachment: fixed; */
+  }
+  
+  .destinfo-img {
+    object-fit: cover;
     background-attachment: fixed;
-    background-blend-mode: color;
-    background-size: cover;
-}
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Places the image behind the text */
+  }
+  
+  .banner-sectinfo {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .bannerinfo-title {
+    /* color: white;  */
+    font-size: 2rem; /* Adjust as necessary */
+    text-align: center;
+  }
+  
+  .destinfo_gallery{
+    width: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    height: 350px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+
+  .destinfo_box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
