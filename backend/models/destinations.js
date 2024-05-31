@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   destinations.init({
+    // destination_id: DataTypes.INTEGER,
     destination_name: DataTypes.STRING,
     destination_title1: DataTypes.STRING,
     description1: DataTypes.STRING,

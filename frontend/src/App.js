@@ -33,7 +33,7 @@ function App() {
         <Route exact path='/About us' element={<AboutUs/>}></Route>
         {/* <Route exact path='/Our team' element={<OurTeam/>}></Route> */}
         <Route exact path='/destinations' element={<Destination/>}></Route>
-        <Route exact path='/Tours' element={<Tours/>}></Route>
+        <Route exact path='/tours' element={<Tours/>}></Route>
         <Route exact path='/Blogs' element={<Blogs/>}></Route>
         <Route path="/DestinationInfo" element={<DestinationInfo />} />
          

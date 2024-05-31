@@ -24,7 +24,9 @@ fs
       file !== basename &&
       file.slice(-3) === '.js' &&
       file.indexOf('.test.js') === -1&&
-      file !== 'destinations.js'////////////////////////////
+      file !== 'destinations.js' &&
+      file !== 'tours.js'
+
     );
   })
   .forEach(file => {
@@ -34,6 +36,10 @@ fs
 
   const destinations = require('./destinations.js')(sequelize, Sequelize.DataTypes);
 db[destinations.name] = destinations;
+/////////////////////////////////////////////
+
+const tours = require('./tours.js')(sequelize, Sequelize.DataTypes);
+db[tours.name] = tours;
 /////////////////////////////////////////////
 
 Object.keys(db).forEach(modelName => {

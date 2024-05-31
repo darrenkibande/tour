@@ -1,33 +1,63 @@
-import React from 'react'
-import './Tours.css'
-import pic from '../assets/elizeu-dias-SEq9dyZSe6c-unsplash.jpg'
+import React, { useEffect, useState } from 'react';
+import './Tours.css';
 import { IoLocationOutline } from "react-icons/io5";
 import { FaRegCalendarAlt } from "react-icons/fa";
 
 function Tours() {
-  return (
-    <div className="tour-container">   
-    <div className="tour-sect">     
-        <p className="banner-title">Tour List</p>
-    </div>
+  const [tours, setTours] = useState([]);
 
-    <div class="card-container">
- 
-  <div class="card">
-    <img src={pic} alt="" class="card__image"/>
-    <div class="card__info">
-      <h3 class="card__title"><IoLocationOutline className='icon__tour'/>New York</h3>
-      <p class="card__text">$950<span>/Per Person</span></p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nostrum.</p>
-      <div class="card__details">
-        <p class="card__detail">100 Superb</p>
-        <p class="card__detail"><FaRegCalendarAlt className='icon__tour'/>12 Days/ 13 nights</p>
+  useEffect(() => {
+    async function fetchTours() {
+      try {
+        const response = await fetch('http://localhost:8080/tours');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setTours(data);
+      } catch (error) {
+        console.error('Error fetching tours:', error);
+      }
+    }
+
+    fetchTours();
+  }, []);
+
+  return (
+    <div className="tour-container">
+      <div className="tour-sect">
+        <p className="banner-title">Tour List</p>
+      </div>
+
+      <div className="tour-titles">
+        <p>Choose Your Package</p>
+        <p>Select Your Best Package <br /> For Your Travel</p>
+      </div>
+
+      <div className="card-container">
+        {tours.map(tour => (
+          <div key={tour.id} className="card">
+            <img src={`/${tour.image_preview}`} alt={tour.destination_name} className="card__image" />
+            <div className="card__info">
+              <h3 className="card__title">
+                <IoLocationOutline className='icon__tour' />
+                {tour.destination_name}
+              </h3>
+              <p className="card__text">${tour.price}<span>/Per Person</span></p>
+              <p>{tour.description}</p>
+              <div className="card__details">
+                <p className="card__detail">100 Superb</p>
+                <p className="card__detail">
+                  <FaRegCalendarAlt className='icon__tour' />
+                  {tour.duration} Days/ {tour.duration + 1} nights
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
-  </div>
-  </div>
-    </div>
-  )
+  );
 }
 
-export default Tours
+export default Tours;

@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   tours.init({
-    name: DataTypes.STRING,
+    destination_name: DataTypes.STRING,
     description: DataTypes.STRING,
     duration: DataTypes.INTEGER,
     price: DataTypes.DECIMAL,
