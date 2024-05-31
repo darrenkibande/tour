@@ -1,5 +1,6 @@
 const express = require('express');
 const multer = require('multer');
+const path = require('path');
 const tourController = require('../controllers/tourController.js');
 
 const router = express.Router();
@@ -10,17 +11,16 @@ const storage = multer.diskStorage({
     cb(null, 'uploads/'); // Ensure this directory exists
   },
   filename: (req, file, cb) => {
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-    cb(null, uniqueSuffix + '-' + file.originalname);
+    cb(null, Date.now() + path.extname(file.originalname));
   }
 });
 
 const upload = multer({ storage: storage });
 
 router.get('/', tourController.getAllTours);
-router.get('/:id', tourController.getTourById);
+// router.get('/:id', tourController.getTourById);
 router.post('/', upload.single('image'), tourController.createTour); // Add multer middleware here
-router.put('/:id', upload.single('image'), tourController.updateTour); // Add multer middleware here
-router.delete('/:id', tourController.deleteTour);
+// router.put('/:id', upload.single('image'), tourController.updateTour); 
+// router.delete('/:id', tourController.deleteTour);
 
 module.exports = router;

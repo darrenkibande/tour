@@ -9,7 +9,6 @@
   --gray700: #374151;
   --violet700: #be75d8;  
   --brown: #d87b45;
-  --lavender: #cda7f2;
 }
 
 .App{
@@ -42,8 +41,10 @@ body {
 }
 
 .icon-oth{
-  font-size: 20px;
+  vertical-align: middle;
+  font-size: 18px;
   cursor: pointer;
+  stroke-width: 2;
 }
 
 /* -------custom scrollbar----------- */
@@ -82,16 +83,19 @@ body {
   letter-spacing: 0.03em;
 }
 
-.btn{
+.customBtn{
   background: var(--orange500);
   border-radius: 5px;
   color: var(--white);
   border-color: var(--white);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   padding: 12px;
-  border-style: none;
-  /* box-shadow: none; */
+  border-style: none;  
+}
+
+.customBtn:hover{
+  background: var(--gray700);
 }
 
 .banner-title{

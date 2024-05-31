@@ -1,6 +1,7 @@
 import React from 'react'
 import './Hero.css'
 import video from '../assets/video.mp4'
+import { Link } from 'react-router-dom';
 
 import { CiSearch } from "react-icons/ci";
 
@@ -14,17 +15,17 @@ function Hero() {
         <div className="hero-txt">
           <p className='h-title'>Unlock your travel dreams with us.</p>
           <p className='h-subtle'>Discover the worlds most adventurous nature</p>
-          <button className='btn'>Find out more</button>
+          <Link to='/destinations'><button className='customBtn'>Find out more</button></Link>
         </div>
 
         <div className="float-div">
           <div className="inp-sect">
             <p className='h-subtle'>Find Adventure That Suits Your Needs</p>
             <div className="inp-items">
-              <input type="text" name="" id="" placeholder='Where to?'className='inp-change'/>
-              <input type="date" name="" id="" placeholder='When?' className='inp-change'/>
-              <input type="text" name="" id="" placeholder='Travel type?'className='inp-change'/>
-              <button className='btn'><CiSearch className='icon-oth'/> Search</button>
+              <input type="text" name="" id="" placeholder='Where to?'className='input-custom'/>
+              <input type="date" name="" id="" placeholder='When?' className='input-custom'/>
+              <input type="text" name="" id="" placeholder='Travel type?'className='input-custom'/>
+              <button className='customBtn'><CiSearch className='icon-oth'/> Search</button>
             </div>
           </div>
         </div>

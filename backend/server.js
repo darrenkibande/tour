@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const destinationsRouter = require ('./routes/destinationsRouter.js')
-const tourRoutes = require('./routes/tourRoutes.js');
+const tourRouter = require('./routes/tourRoutes.js');
 
 const app = express();
 
@@ -15,7 +15,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Routes
 app.use('/destinations', destinationsRouter);
-app.use('/tours', tourRoutes);
+app.use('/tours', tourRouter);
 // app.use('/api/other', otherRoutes);
 
 const PORT = process.env.PORT || 8080;

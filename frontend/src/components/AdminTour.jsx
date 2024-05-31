@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './AdminTour.css';
 
 function AdminTour() {
@@ -9,6 +9,17 @@ function AdminTour() {
     price: '',
     image_preview: null,
   });
+
+  useEffect(() => {
+    // Reset form data when the component mounts
+    setFormData({
+      destination_name: '',
+      description: '',
+      duration: '',
+      price: '',
+      image_preview: null,
+    });
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -68,7 +79,7 @@ function AdminTour() {
         <textarea name="description" placeholder="Description" value={formData.description} onChange={handleChange} required />
         <input type="number" name="duration" placeholder="Duration (in days)" value={formData.duration} onChange={handleChange} required />
         <input type="number" name="price" placeholder="Price" value={formData.price} onChange={handleChange} required />
-        <input type="file" name="image_preview" onChange={handleImageChange} required />
+        <input type="file" name="image_preview" onChange={handleImageChange} required accept="image/*" />
         <button type="submit">Upload</button>
       </form>
     </div>
