@@ -2,7 +2,6 @@ const express = require('express');
 const multer = require('multer');
 const path = require('path');
 const tourController = require('../controllers/tourController.js');
-
 const router = express.Router();
 
 // Configure Multer for file uploads
@@ -19,7 +18,7 @@ const upload = multer({ storage: storage });
 
 router.get('/', tourController.getAllTours);
 // router.get('/:id', tourController.getTourById);
-router.post('/', upload.single('image'), tourController.createTour); // Add multer middleware here
+router.post('/', upload.single('image_preview'), tourController.createTour); // Add multer middleware here
 // router.put('/:id', upload.single('image'), tourController.updateTour); 
 // router.delete('/:id', tourController.deleteTour);
 

@@ -37,7 +37,7 @@ function Tours() {
       <div className="card-container">
         {tours.map(tour => (
           <div key={tour.id} className="card">
-            <img src={`/${tour.image_preview}`} alt={tour.destination_name} className="card__image" />
+            <img src={`http://localhost:8080/${tour.image_preview}`} alt={tour.destination_name} className="card__image" />
             <div className="card__info">
               <h3 className="card__title">
                 <IoLocationOutline className='icon__tour' />

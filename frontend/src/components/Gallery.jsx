@@ -9,8 +9,8 @@ function Gallery() {
     <div className="gallery_container">
 
       <div className="gallery-title">
-        <p className='title_h1'>Featured Tours</p>
-        <p className='div-title'>Beautiful Places Around The World </p>
+        <p className='title-primary'>Featured Destinations</p>
+        <p className='title-secondary'>Beautiful Places Around The World </p>
       </div>
 
       <div className="img-dom">

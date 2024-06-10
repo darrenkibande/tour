@@ -61,10 +61,18 @@ body {
   border-radius: 10px;
 }
 
-.title_h1{
-  font-size: 2rem;
+.title-primary{
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--gray800);
+}
+
+.title-secondary{ 
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    font-style: normal;   
+    color: var(--orange500); 
+    font-size: 2.5rem;
 }
 
 .txt_cont{
@@ -77,10 +85,10 @@ body {
 
 .txt_p{
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 550;
   text-align: justify;
   line-height: 1.6;
-  letter-spacing: 0.03em;
+  /* letter-spacing: 0.03em; */
 }
 
 .customBtn{

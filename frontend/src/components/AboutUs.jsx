@@ -17,9 +17,11 @@ function AboutUs() {
             <img src={img1} alt="" className='img_gal'/>
         </div>
         <div className="content-grid">
+          <p className='title-primary'>Lorem ipsum dolor.</p>
             <p className='txt_p'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quia officiis placeat iure, laboriosam in consectetur cum eveniet delectus harum deserunt, autem totam rerum magnam saepe sint ullam tenetur voluptas dolor qui! Debitis, quos deserunt. Soluta quasi, tenetur laborum eos excepturi sequi aliquid et alias exercitationem error enim? Nesciunt, corrupti.</p>
         </div>
         <div className="content-grid">
+        <p className='title-primary'>Lorem ipsum dolor.</p>
             <p className='txt_p'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, illum itaque. Temporibus perspiciatis, vero consequatur dolor, praesentium dolorem quae laudantium odio, illo non quis aperiam! Sint nihil, repellat praesentium architecto earum alias molestiae magni suscipit at sit quos similique velit quis aliquid ratione voluptatem. Maxime, tempore commodi. Porro, vitae mollitia.</p>
         </div>
         <div className="content-grid">

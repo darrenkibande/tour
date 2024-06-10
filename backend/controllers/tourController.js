@@ -6,24 +6,11 @@ exports.getAllTours = async (req, res) => {
         const allTours = await tours.findAll();
         res.status(200).json(allTours);
     } catch (error) {
-        res.status(500).json({ error: 'An error occurred while fetching tours.' });
+        res.status(500).json({ error: 'Internal server error' });
     }
 };
 
-// Get a single tour by ID
-exports.getTourById = async (req, res) => {
-    const { id } = req.params;
-    try {
-        const tour = await tours.findByPk(id);
-        if (tour) {
-            res.status(200).json(tour);
-        } else {
-            res.status(404).json({ error: 'Tour not found.' });
-        }
-    } catch (error) {
-        res.status(500).json({ error: 'An error occurred while fetching the tour.' });
-    }
-};
+
 
 // Create a new tour
 exports.createTour = async (req, res) => {

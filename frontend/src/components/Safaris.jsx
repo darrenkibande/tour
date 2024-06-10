@@ -7,7 +7,7 @@ function Safaris() {
   return (
    <div className="safari_container">
     <div className="safari_title">
-        <p className='div-title'>Explore The World For Yourself</p>
+        <p className='title-secondary'>Explore The World For Yourself</p>
     </div>
 
     <div className="safari_box">
