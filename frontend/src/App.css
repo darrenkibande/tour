@@ -76,11 +76,12 @@ body {
 }
 
 .txt_cont{
-  font-size: 17px;
+  font-size: 1em;
   font-weight: 500;
   text-align: justify;
   line-height: 1.6;
   letter-spacing: 0.03em;
+  text-transform: capitalize;
 }
 
 .txt_p{

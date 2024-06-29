@@ -30,8 +30,8 @@ function Tours() {
       </div>
 
       <div className="tour-titles">
-        <p>Choose Your Package</p>
-        <p>Select Your Best Package <br /> For Your Travel</p>
+        <p className='title-primary'>Choose Your Package</p>
+        <p className='title-secondary'>Select Your Best Package For Your Travel</p>
       </div>
 
       <div className="card-container">
@@ -44,7 +44,7 @@ function Tours() {
                 {tour.destination_name}
               </h3>
               <p className="card__text">${tour.price}<span>/Per Person</span></p>
-              <p>{tour.description}</p>
+              <p className='txt_cont'>{tour.description}</p>
               <div className="card__details">
                 <p className="card__detail">100 Superb</p>
                 <p className="card__detail">

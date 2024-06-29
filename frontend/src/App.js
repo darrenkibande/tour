@@ -15,6 +15,11 @@ import Tours from './components/Tours';
 import Blogs from './components/Blogs'
 import Offer from './components/WhatWeOffer'
 import DestinationInfo from './components/Destination_info';
+import TourPackages from './components/Package';
+import AdminDestination from './components/AdminDestination';
+import AdminTour from './components/AdminTour';
+import AdminMenu from './components/AdminMenu';
+
 
 function App() {
   return (
@@ -35,13 +40,16 @@ function App() {
         <Route exact path='/destinations' element={<Destination/>}></Route>
         <Route exact path='/tours' element={<Tours/>}></Route>
         <Route exact path='/Blogs' element={<Blogs/>}></Route>
-        <Route path="/DestinationInfo" element={<DestinationInfo />} />
-         
-        {/* <Route exact path='/services' element={<Services/>}></Route>
-        <Route exact path='/gallery' element={<Gallery/>}></Route>
-        <Route exact path='/products' element={<Products/>}></Route>
-        <Route exact path='/blog' element={<Blog/>}></Route> */}
+        <Route exact path='/TourPackages' element={<TourPackages/>}></Route>
+        <Route path="/DestinationInfo" element={<DestinationInfo />}></Route>         
+        <Route exact path='/AdminDestination' element={<AdminDestination/>}></Route>
+        <Route exact path='/AdminTour' element={<AdminTour/>}></Route>
+        <Route exact path='/AdminMenu' element={<AdminMenu/>}></Route>
+
         
+        {/* <Route exact path='/products' element={<Products/>}></Route>
+        <Route exact path='/blog' element={<Blog/>}></Route>
+         */}
         
       </Routes>
       <Footer/>

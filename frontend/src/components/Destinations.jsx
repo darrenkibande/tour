@@ -28,7 +28,7 @@ function Destinations_info() {
   };
 
   return (
-    <div className="dest-container">
+    <div className="destination-container">
       <div className="banner-dest">
         <div className="banner-sect">
           <p className='banner-title'>Destination List</p>
@@ -36,8 +36,8 @@ function Destinations_info() {
       </div>
 
       <div className="dest-content">
-        <p className='title_h1'> <b>Amazing</b> Tours and Fun <br /> Adventures <b>waiting for you.</b></p>
-        <p className='txt_cont' style={{ fontSize: '0.9em' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam blanditiis earum modi maiores excepturi, cumque magnam error nulla dignissimos quae perspiciatis quis voluptates facere quaerat quod cum aut minima.</p>
+        <p className='title-secondary'>Amazing Tours and Fun Adventures waiting for you.</p>
+        <p className='txt_p'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam blanditiis earum modi maiores excepturi, cumque magnam error nulla dignissimos quae perspiciatis quis voluptates facere quaerat quod cum aut minima.</p>
       </div>
 
       <div className="dest_box">

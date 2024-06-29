@@ -1,7 +1,7 @@
 import React from 'react'
 import './Blogs.css'
 // import AdminDestination from './AdminDestination'
-import AdminTour from './AdminTour'
+// import AdminTour from './AdminTour'
 
 function Blogs() {
   return (
@@ -9,7 +9,7 @@ function Blogs() {
     <div className="blog-sect">     
         <p className="banner-title">Blog</p>
     </div>
-    <AdminTour/>
+    {/* <AdminTour/> */}
     {/* <AdminDestination/> */}
     </div>
   )

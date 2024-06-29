@@ -13,11 +13,13 @@
 
 .dest-content{
     width: 100%;
+    text-align: center;
     /* padding: 5px; */
 }
 
-.dest-container{
+.destination-container{
     margin-bottom: 3rem;
+    width: 100%;
 }
 
 .dest_box{
