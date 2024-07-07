@@ -1,7 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import './ContactUS.css'
+import Newsletter from './Newsletter';
 
 function ContactUS() {
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [companyName, setCompanyName] = useState('');
@@ -32,7 +42,7 @@ function ContactUS() {
       </div>    
     </div>
 
-      <div className="wrapper">
+      <div data-aos="zoom-in" className="wrapper">
         <div className="form">
           <h4>GET IN TOUCH</h4>
           <h2 className="form-headline">Send us a message</h2>
@@ -116,7 +126,7 @@ function ContactUS() {
         </div>
       </div>
 
-      <div className="map">
+      <div data-aos="zoom-in" className="map">
       <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8421.451122451923!2d34.76540190977022!3d-0.14584628984489334!2m3!1f0!2f38.00119298563272!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x182aa437ad4ac81d%3A0x2012a439d6248dd2!2sKisumu!5e1!3m2!1sen!2ske!4v1712993804995!5m2!1sen!2ske" 
       width="100%"
@@ -129,6 +139,7 @@ function ContactUS() {
 
       </iframe>
       </div>
+      <Newsletter/>
     </div>
   );
 }

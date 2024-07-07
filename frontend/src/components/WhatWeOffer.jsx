@@ -1,15 +1,17 @@
-import React from "react";
-import {
-  FaHammer,
-  FaBrush,
-  FaWrench,
-  FaTruckPickup,
-  FaBroom,
-  FaPlug,
-} from "react-icons/fa";
+import React, {useEffect} from 'react'
+import {FaHammer, FaBrush, FaWrench, FaTruckPickup, FaBroom, FaPlug,} from "react-icons/fa";
 import "./WhatWeOffer.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Newsletter from './Newsletter';
 
 function BannerDest() {
+  useEffect(() => {
+    window.scrollTo(0,0);
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <div className="banner-dest">
       <div className="banner-sect">
@@ -35,7 +37,7 @@ function WhatWeOffer() {
   return (
     <div className="offer-section">    
     <BannerDest />
-    <div className="offer_row">
+    <div data-aos="zoom-in" className="offer_row">
       
       <OfferContent
         icon={<FaHammer />}
@@ -68,7 +70,7 @@ function WhatWeOffer() {
         description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam consequatur necessitatibus eaque."
       />
     </div>
-
+    <Newsletter/>
     </div>
   );
 }

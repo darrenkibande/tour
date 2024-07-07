@@ -1,8 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Destinations.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Newsletter from './Newsletter';
 
 function Destinations_info() {
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   const [destinations, setDestinations] = useState([]);
   const navigate = useNavigate();
 
@@ -50,6 +60,7 @@ function Destinations_info() {
           </div>
         ))}
       </div>
+      <Newsletter/>
     </div>
   );
 }

@@ -15,7 +15,7 @@ import Tours from './components/Tours';
 import Blogs from './components/Blogs'
 import Offer from './components/WhatWeOffer'
 import DestinationInfo from './components/Destination_info';
-import TourPackages from './components/Package';
+import TourPackages from './components/TourPackage';
 import AdminDestination from './components/AdminDestination';
 import AdminTour from './components/AdminTour';
 import AdminMenu from './components/AdminMenu';

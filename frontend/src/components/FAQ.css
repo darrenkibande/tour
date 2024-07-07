@@ -3,23 +3,25 @@
   }
 
   .container-title{
-    text-align: center;
+    position: relative;
     margin-top: 3rem;
-    height: 22rem;
+    height: 20rem;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background: url("../assets/peter-conlan-LEgwEaBVGMo-unsplash.jpg");
+  
+    background: url("../assets/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
     background-attachment: fixed;
     background-blend-mode: color;
     background-size: cover;
+    background-position: center;
   }
 
   .accordions {
     max-width: 80%;
     margin: auto;
     padding-bottom: 4rem;
+    margin-top: 2rem;
   }
   
   .accordion .accordion__title {

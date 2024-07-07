@@ -1,8 +1,12 @@
 .about-container{
-    /* margin-top: 6rem; */
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
 }
 
+.about-content{
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 2rem;
+}
 .about-grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -12,16 +16,19 @@
 }
 
 .banner-about{
+    position: relative;
     margin-top: 3rem;
-    height: 22rem;
+    height: 20rem;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background: url("../assets/peter-conlan-LEgwEaBVGMo-unsplash.jpg");
+    background: url("../assets/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
     background-attachment: fixed;
     background-blend-mode: color;
     background-size: cover;
+    background-position: center;
+ 
 }
 
 .content-grid{

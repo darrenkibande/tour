@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { FaAngleDown } from 'react-icons/fa';
 import './FAQ.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Newsletter from './Newsletter';
 
 function FAQ() {
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <section className="faq-section">
       <div className="faq-container">
@@ -11,7 +20,7 @@ function FAQ() {
         <p className="banner-title">F.A.Q</p>
         </div>
        
-        <div className="accordions">
+        <div data-aos="zoom-in" className="accordions">
           <div className="accordion">
             <label className="accordion__title">
               <input type="radio" name="radio" id="radio_1" defaultChecked /> 

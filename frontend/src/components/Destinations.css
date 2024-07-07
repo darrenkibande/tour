@@ -1,32 +1,40 @@
 .banner-dest{
-    /* margin-top: 3rem; */
-    height: 22rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  margin-top: 3rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    background: url("../assets/peter-conlan-LEgwEaBVGMo-unsplash.jpg");
-    background-attachment: fixed;
-    background-blend-mode: color;
-    background-size: cover;
+  background: url("../assets/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
+  background-attachment: fixed;
+  background-blend-mode: color;
+  background-size: cover;
+  background-position: center;
 }
 
 .dest-content{
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
+    line-height: 10px;
+    margin-left: 4rem;
+    margin-right: 4rem;
     /* padding: 5px; */
 }
 
 .destination-container{
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
     width: 100%;
 }
 
 .dest_box{
-    width: 100%;
+    /* width: 100%; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    margin-bottom: 3rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
 }
 
 .dest_gallery {

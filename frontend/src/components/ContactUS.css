@@ -7,21 +7,31 @@
   }
 
   .banner-dest{
+    position: relative;
     margin-top: 3rem;
-    height: 22rem;
+    height: 20rem;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background: url("../assets/peter-conlan-LEgwEaBVGMo-unsplash.jpg");
+  
+    background: url("../assets/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
     background-attachment: fixed;
     background-blend-mode: color;
     background-size: cover;
+    background-position: center;
 }
 
 .map{
   margin-top: 2rem;
-    margin-bottom: 3rem;
+  padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.wrapper{
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
   
   div.form {
@@ -98,9 +108,9 @@
     border-radius: 5px;
   }
   
-  .wrapper > * {
+  /* .wrapper > * {
     padding: 1em;
-  }
+  } */
   @media (min-width: 700px) {
     .wrapper {
       display: grid;

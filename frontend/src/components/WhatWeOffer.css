@@ -1,31 +1,36 @@
 .offer-content {
   margin-bottom: 3rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
+  
 }
 
 .banner-dest {
-  /* margin-top: 3rem; */
-  height: 22rem;
-  width: 100%;
+  position: relative;
+  margin-top: 3rem;
+  height: 20rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../assets/peter-conlan-LEgwEaBVGMo-unsplash.jpg");
+
+  background: url("../assets/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
   background-attachment: fixed;
   background-blend-mode: color;
   background-size: cover;
+  background-position: center;
 }
 
 .offer_row {
+  margin-left: 4rem;
+  margin-right: 4rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Change to 3 columns */
-  grid-gap: 10px; /* Set the gap between grid items */
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px; 
 }
 
 .offer_card {
   height: 250px;
   padding: 2em 2em;
-  background: linear-gradient(#ffffff 50%, #2c7bfe 50%);
+  background: linear-gradient(#ffffff 50%, #f97316 50%);
   background-size: 100% 200%;
   background-position: 0 2.5%;
   border-radius: 5px;
@@ -35,7 +40,7 @@
 }
 
 .icon-wrapper {
-  background-color: #2c7bfe;
+  background-color: var(--orange500);
   position: relative;
   margin: auto;
   font-size: 30px;
