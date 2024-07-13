@@ -44,19 +44,14 @@ function Destination_info() {
   return (
     <div className='destinfo-container'>
       <div className="banner-destinfo">
-        <img 
-          src={`http://localhost:8080/${destination.image_preview}`} 
-          alt={destination.destination_name} 
-          className='destinfo-img' 
-        />
         <div className="banner-sectinfo">
-          <p className='bannerinfo-title'>{destination.destination_name}</p>
+          <p className='banner-title'>{destination.destination_name}</p>
         </div>
       </div>
 
       <div className="destinfo-content">
-        <p>{destination.destination_title1}</p>
-        <p>{destination.description1}</p>
+        <p className='title-primary info-align'>{destination.destination_title1}</p>
+        <p className='txt_p'>{destination.description1}</p>
 
         <div className="destinfo_box">       
           <div className="destinfo_gallery" key={destination.destination_id} >
@@ -65,10 +60,10 @@ function Destination_info() {
             <img src={`http://localhost:8080/${destination.image3}`} alt={destination.destination_name} className='dest_img' />
 
           </div>      
-      </div>
+        </div>
 
-      <p>{destination.destination_title2}</p>
-      <p>{destination.description2}</p>
+      <p className='title-primary info-align'>{destination.destination_title2}</p>
+      <p className='txt_p'>{destination.description2}</p>
 
       </div>
     </div>

@@ -3,14 +3,18 @@
   }
   
   .banner-destinfo {
-    height: 22rem;
-    width: 100%;
     position: relative;
+    margin-top: 3rem;
+    height: 20rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;    
-    /* background-attachment: fixed; */
+
+    background: url("../assets/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
+    background-attachment: fixed;
+    background-blend-mode: color;
+    background-size: cover;
+    background-position: center;
   }
   
   .destinfo-img {
@@ -54,4 +58,15 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+  }
+
+  .destinfo-content{
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  .info-align{
+    text-align: center;
   }

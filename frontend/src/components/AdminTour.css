@@ -1,6 +1,7 @@
 .upload-tour-container {
     max-width: 600px;
     margin: 0 auto;
+    margin-top: 4rem;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;

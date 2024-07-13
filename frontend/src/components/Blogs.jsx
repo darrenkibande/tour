@@ -2,6 +2,7 @@ import React from 'react'
 import './Blogs.css'
 // import AdminDestination from './AdminDestination'
 // import AdminTour from './AdminTour'
+import AdminMenu from './AdminMenu'
 
 function Blogs() {
   return (
@@ -11,6 +12,7 @@ function Blogs() {
     </div>
     {/* <AdminTour/> */}
     {/* <AdminDestination/> */}
+    <AdminMenu/>
     </div>
   )
 }

@@ -1,14 +1,16 @@
 .tour-sect{
-    margin-top: 3rem;
-    height: 22rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  margin-top: 3rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    background: url("../assets/peter-conlan-LEgwEaBVGMo-unsplash.jpg");
-    background-attachment: fixed;
-    background-blend-mode: color;
-    background-size: cover;
+  background: url("../assets/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
+  background-attachment: fixed;
+  background-blend-mode: color;
+  background-size: cover;
+  background-position: center;
 }
 
 .tour-titles{
@@ -21,6 +23,8 @@
 .card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    margin-left: 4rem;
+    margin-right: 4rem;
   }
  
   .card {

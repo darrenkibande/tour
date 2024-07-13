@@ -26,8 +26,8 @@ function Navbar() {
         </ul>
         </li></Link>
         <Link className='li-links' to='/destinations'><li>Destinations</li></Link>
-        {/* <Link className='li-links'to='/tours'><li>Tour Package</li></Link> */}
-        <Link className='li-links'to='/TourPackages'><li>Tour Package</li></Link>
+        <Link className='li-links'to='/tours'><li>Tour Package</li></Link>
+        {/* <Link className='li-links'to='/TourPackages'><li>Tour Package</li></Link> */}
         <Link className='li-links'to='/Blogs'><li>Blog</li></Link>
         </ul>
       </div>
