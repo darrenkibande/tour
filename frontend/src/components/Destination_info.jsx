@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import './Destination_info.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Newsletter from './Newsletter';
 
 function Destination_info() {
   const location = useLocation();
@@ -28,6 +31,12 @@ function Destination_info() {
       fetchDestination();
     }
   }, [destination]);
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -66,6 +75,7 @@ function Destination_info() {
       <p className='txt_p'>{destination.description2}</p>
 
       </div>
+      <Newsletter/>
     </div>
   );
 }

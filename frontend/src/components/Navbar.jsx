@@ -3,7 +3,7 @@ import './Navbar.css'
 import { Link } from 'react-router-dom';
 
 // import { SiYourtraveldottv } from "react-icons/si";
-import { LuShoppingCart } from "react-icons/lu";
+import { IoIosSearch } from "react-icons/io";
 import { VscAccount } from "react-icons/vsc";
 
 function Navbar() {
@@ -34,7 +34,7 @@ function Navbar() {
 
       <div className="nav-icons">
         <ul className='ul-links'>
-        <Link className='li-links'><li> <LuShoppingCart className="nav-icon"/></li></Link>
+        <Link className='li-links'><li> <IoIosSearch className="nav-icon"/></li></Link>
         <Link className='li-links' to='/Register'><li> <VscAccount className="nav-icon"/></li></Link>
         </ul>     
      

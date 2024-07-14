@@ -2,9 +2,18 @@ import React, { useEffect, useState } from 'react';
 import './Tours.css';
 import { IoLocationOutline } from "react-icons/io5";
 import { FaRegCalendarAlt } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Newsletter from './Newsletter';
 
 function Tours() {
   const [tours, setTours] = useState([]);
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   useEffect(() => {
     async function fetchTours() {
@@ -56,6 +65,7 @@ function Tours() {
           </div>
         ))}
       </div>
+      <Newsletter/>
     </div>
   );
 }

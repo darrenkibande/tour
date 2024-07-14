@@ -18,7 +18,7 @@ function Counter() {
         const increment = target / 200;
         if (count < target) {
           counter.innerText = `${Math.ceil(count + increment)}`;
-          setTimeout(updateCounter, 1);
+          setTimeout(updateCounter, 50); // Increase the delay to slow down the counter
         } else counter.innerText = target;
       };
       updateCounter();

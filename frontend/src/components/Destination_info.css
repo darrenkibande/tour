@@ -48,7 +48,7 @@
     width: 100%;
     padding-left: 4rem;
     padding-right: 4rem;
-    height: 350px;
+    /* height: 350px; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;

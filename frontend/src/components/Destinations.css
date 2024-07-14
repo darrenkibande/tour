@@ -70,5 +70,9 @@
     text-transform: capitalize;
     font-size: 18px;
   }
+
+  .in-float-imgtxt:hover{
+    cursor: pointer;
+  }
   
 
