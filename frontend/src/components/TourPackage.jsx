@@ -1,139 +1,94 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './TourPackage.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Newsletter from './Newsletter';
 import { CiClock2 } from 'react-icons/ci';
 
-
-const Tabs = () => {
+const Tabs = ({ tour }) => {
   const [activeTab, setActiveTab] = useState('information');
 
   const renderContent = () => {
     switch (activeTab) {
       case 'information':
-        return <div>
-        <h2>Overview</h2>
-        <p>
-          Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla. Duis aliquet varius mauris eget rutrum. Nullam sit amet justo consequat, bibendum orci in, convallis enim. Proin convallis neque viverra finibus cursus. Mauris lacinia lacinia erat in finibus. In non enim libero. Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
-        </p>
-        <h2>Highlight</h2>
-        <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie.</p>
-        <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie.</p>
-        <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie.</p>
-        <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie.</p>
-        <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie.</p>
-        <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie.</p>
-        <table>
-          <tbody>
-            <tr>
-              <th>Destination</th>
-              <td>New York City</td>
-            </tr>
-            <tr>
-              <th>Depature</th>
-              <td>Yes Required</td>
-            </tr>
-            <tr>
-              <th>Departure Time</th>
-              <td>01 April, 2021 10.00AM</td>
-            </tr>
-            <tr>
-              <th>Return Time</th>
-              <td>08 April, 2021 10.00AM</td>
-            </tr>
-            <tr>
-              <th>Included</th>
-              <td>
-                <ul>
-                  <li>Specialized Bilingual Guide</li>
-                  <li>Private Transport</li>
-                  <li>Entrance Fees</li>
-                  <li>Box Lunch, Water, Dinner and Snacks</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>Excluded</th>
-              <td>
-                <ul>
-                  <li>Additional Services</li>
-                  <li>Insurance</li>
-                  <li>Drink</li>
-                  <li>Tickets</li>
-                  <li>Travel With Bus</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>;
+        return (
+          <div>
+            <h2>Overview</h2>
+            <p>{tour.overview || 'No overview available.'}</p>
+            <h2>Highlight</h2>
+            {(tour.highlights || []).map((highlight, index) => (
+              <p key={index}>{highlight}</p>
+            ))}
+            <table>
+              <tbody>
+                <tr>
+                  <th>Destination</th>
+                  <td>{tour.destination || 'N/A'}</td>
+                </tr>
+                <tr>
+                  <th>Departure</th>
+                  <td>{tour.departure || 'N/A'}</td>
+                </tr>
+                <tr>
+                  <th>Departure Time</th>
+                  <td>{tour.departure_time || 'N/A'}</td>
+                </tr>
+                <tr>
+                  <th>Return Time</th>
+                  <td>{tour.return_time || 'N/A'}</td>
+                </tr>
+                <tr>
+                  <th>Included</th>
+                  <td>
+                    <ul>
+                      {(tour.included || []).map((item, index) => (
+                        <li key={index}>{item}</li>
+                      ))}
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Excluded</th>
+                  <td>
+                    <ul>
+                      {(tour.excluded || []).map((item, index) => (
+                        <li key={index}>{item}</li>
+                      ))}
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        );
       case 'travelPlan':
-        return  <div>
-        <h2>Overview</h2>
-        <p>
-          Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla. Duis aliquet varius mauris eget rutrum. Nullam sit amet justo consequat, bibendum orci in, convallis enim. Proin convallis neque viverra finibus cursus. Mauris lacinia lacinia erat in finibus.
-        </p>
-        <h3>01 DAY 1 : Departure And Small Tour</h3>
-        <p>10.00 AM to 10.00 PM</p>
-        <p>
-          Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla.
-        </p>
-        <ul>
-          <li>Specialized Bilingual Guide</li>
-          <li>Private Transport</li>
-          <li>Entrance Fees</li>
-          <li>Box Lunch, Water, Dinner and Snacks</li>
-        </ul>
-        <h3>02 DAY 2 : Departure And Small Tour</h3>
-        <p>10.00 AM to 10.00 PM</p>
-        <p>
-          Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla.
-        </p>
-        <ul>
-          <li>Specialized Bilingual Guide</li>
-          <li>Private Transport</li>
-          <li>Entrance Fees</li>
-          <li>Box Lunch, Water, Dinner and Snacks</li>
-        </ul>
-        <h3>03 DAY 3 : Departure And Small Tour</h3>
-        <p>10.00 AM to 10.00 PM</p>
-        <p>
-          Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla.
-        </p>
-        <ul>
-          <li>Specialized Bilingual Guide</li>
-          <li>Private Transport</li>
-          <li>Entrance Fees</li>
-          <li>Box Lunch, Water, Dinner and Snacks</li>
-        </ul>
-        <h3>04 DAY 4 : Departure And Small Tour</h3>
-        <p>10.00 AM to 10.00 PM</p>
-        <p>
-          Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla.
-        </p>
-        <ul>
-          <li>Specialized Bilingual Guide</li>
-          <li>Private Transport</li>
-          <li>Entrance Fees</li>
-          <li>Box Lunch, Water, Dinner and Snacks</li>
-        </ul>
-        <h3>05 DAY 5 : Departure And Small Tour</h3>
-        <p>10.00 AM to 10.00 PM</p>
-        <p>
-          Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla.
-        </p>
-        <ul>
-          <li>Specialized Bilingual Guide</li>
-          <li>Private Transport</li>
-          <li>Entrance Fees</li>
-          <li>Box Lunch, Water, Dinner and Snacks</li>
-        </ul>
-      </div>;
+        return (
+          <div>
+            <h2>Travel Plan</h2>
+            {(tour.travel_plan || []).map((day, index) => (
+              <div key={index}>
+                <h3>{day.title || 'No title'}</h3>
+                <p>{day.time || 'No time specified'}</p>
+                <p>{day.description || 'No description available'}</p>
+                <ul>
+                  {(day.details || []).map((detail, i) => (
+                    <li key={i}>{detail}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        );
       case 'gallery':
-        return <div>
-        
-      </div>;
+        return (
+          <div>
+            <h2>Gallery</h2>
+            {(tour.gallery || []).map((image, index) => (
+              <img key={index} src={image} alt={`gallery-${index}`} />
+            ))}
+          </div>
+        );
       default:
         return null;
     }
@@ -142,24 +97,9 @@ const Tabs = () => {
   return (
     <div>
       <div className="tabs">
-        <button
-          className={activeTab === 'information' ? 'active' : ''}
-          onClick={() => setActiveTab('information')}
-        >
-          Information
-        </button>
-        <button
-          className={activeTab === 'travelPlan' ? 'active' : ''}
-          onClick={() => setActiveTab('travelPlan')}
-        >
-          Travel Plan
-        </button>
-        <button
-          className={activeTab === 'gallery' ? 'active' : ''}
-          onClick={() => setActiveTab('gallery')}
-        >
-          Gallery
-        </button>
+        <button className={activeTab === 'information' ? 'active' : ''} onClick={() => setActiveTab('information')}>Information</button>
+        <button className={activeTab === 'travelPlan' ? 'active' : ''} onClick={() => setActiveTab('travelPlan')}>Travel Plan</button>
+        <button className={activeTab === 'gallery' ? 'active' : ''} onClick={() => setActiveTab('gallery')}>Gallery</button>
       </div>
       <div className="content">{renderContent()}</div>
     </div>
@@ -167,12 +107,18 @@ const Tabs = () => {
 };
 
 function TourPackage() {
+  const location = useLocation();
+  const { tour } = location.state || {}; // Default to an empty object if state is undefined
 
   useEffect(() => {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     AOS.init();
     AOS.refresh();
   }, []);
+
+  if (!tour) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="package_container">
@@ -183,104 +129,56 @@ function TourPackage() {
       <div className="package_sides">
         <div className="rt_package">
           <div className="image-holder">
-            <img src="" alt="" className="img-package" />
+            <img src={`http://localhost:8080/${tour.image_preview }`} alt={tour.destination_name} className="img-package" />
           </div>
-          <p>Western Express Northbound</p>
-          <p>Mount Dtna, Spain</p>
-          <hr
-            style={{
-              margin: '20px 0',
-              backgroundColor: '#ccc',
-              border: 'none',
-              height: '1px',
-            }}
-          />
+          <p>{tour.destination_name}</p>
+          <p>{tour.title || 'No title'}</p>          
+          <hr style={{ margin: '20px 0', backgroundColor: '#ccc', border: 'none', height: '1px' }} />
 
           <div className="info-breaker">
             <div className="package-icons">
               <CiClock2 />
               <p>Duration</p>
-              <p>14 days</p>
+              <p>{tour.duration} days</p>
             </div>
             <div className="package-icons">
               <CiClock2 />
-              <p>Duration</p>
-              <p>14 days</p>
+              <p>Price</p>
+              <p>${tour.price}</p>
             </div>
             <div className="package-icons">
               <CiClock2 />
-              <p>Duration</p>
-              <p>14 days</p>
+              <p>Rating</p>
+              <p>{tour.rating || 'N/A'}</p>
             </div>
             <div className="package-icons">
               <CiClock2 />
-              <p>Duration</p>
-              <p>14 days</p>
+              <p>Category</p>
+              <p>{tour.category || 'N/A'}</p>
             </div>
           </div>
 
-          <hr
-            style={{
-              margin: '20px 0',
-              backgroundColor: '#ccc',
-              border: 'none',
-              height: '1px',
-            }}
-          />
+          <hr style={{ margin: '20px 0', backgroundColor: '#ccc', border: 'none', height: '1px' }} />
 
-          <Tabs />
+          <Tabs tour={tour} />
         </div>
 
         <div className="lt_package">
           <p>Book this package</p>
           <div className="booking-inputs">
-            <input
-              type="text"
-              name="fullname"
-              placeholder="Your Full Name"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-            />
-            <input
-              type="tel"
-              name="tel"
-              placeholder="Phone"
-            />
-            <input
-              type="text"
-              name="ticket"
-              placeholder="Ticket Type"
-            />
-            <input
-              type="number"
-              name="adult"
-              placeholder="Adult"
-            />
-            <input
-              type="number"
-              name="child"
-              placeholder="Child"
-            />
-            <input
-              type="date"
-              name="date"
-              placeholder="dd/mm/yyyy"
-            />
-           <textarea
-  name="message"
-  placeholder="Message"
-  style={{ height: "10rem", textAlign: "start", resize: "vertical" }}
-  rows={10}
-/>
-
+            <input type="text" name="fullname" placeholder="Your Full Name" />
+            <input type="email" name="email" placeholder="Your Email" />
+            <input type="tel" name="tel" placeholder="Phone" />
+            <input type="text" name="ticket" placeholder="Ticket Type" />
+            <input type="number" name="adult" placeholder="Adult" />
+            <input type="number" name="child" placeholder="Child" />
+            <input type="date" name="date" placeholder="dd/mm/yyyy" />
+            <textarea name="message" placeholder="Message" style={{ height: "10rem", textAlign: "start", resize: "vertical" }} rows={10} />
             <button type="button">Book now</button>
           </div>
         </div>
       </div>
-      <Newsletter/>
+      <Newsletter />
     </div>
   );
 }

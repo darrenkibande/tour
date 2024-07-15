@@ -58,8 +58,14 @@
 
 .input-custom{    
     /* text-align: start; */
-    padding-left: 5px;
-    height: 2.3rem;
+    /* padding-left: 5px; */
+    /* height: 2.3rem; */
     width: 25%;
     border-radius: 10px;
+}
+
+.inp-date{
+    height: 2.4rem;
+    border: 1px solid #ccc;
+    padding: 2px;
 }
