@@ -49,7 +49,7 @@ function Gallery() {
         {destinations.slice(0, 1).map(destination => (
           <div className="lt_side" key={destination.destination_id}>
             <div className="img-container" onClick={() => handleClick(destination)}>
-              <img src={`http://localhost:8080/${destination.image_preview}`} alt={destination.destination_name} className='img_gal' />
+              <img src={`http://localhost:8080/${destination.image_preview}`} alt={destination.destination_name} className='img_gal_full' />
               <div className="in-img">
                 <p className='in-float-img'>{destination.destination_name}</p>
               </div>
@@ -70,7 +70,7 @@ function Gallery() {
           ))}
         </div>
       </div>
-      </div>
+    </div>
   );
 }
 

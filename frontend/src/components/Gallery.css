@@ -18,10 +18,24 @@
 
 .lt_side {
   width: 50%;
+  height: 520px;
+}
+
+.img-container {
+  width: 100%;
+  height: 100%;
+}
+
+.img_gal_full {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; 
+  transition: transform 0.3s ease-in-out;
 }
 
 .rt_side {
   width: 50%;
+  height: 520px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
@@ -34,14 +48,16 @@
 
 .img_gal {
   width: 100%;
-  height: 100%;
+  height: auto; 
+  max-height: 250px; 
   transition: transform 0.3s ease-in-out;
 }
 
 .img-container {
   position: relative;
   overflow: hidden;
-  height: 100%;
+  object-fit: fill; 
+  height: 100%; 
 }
 
 .in-img {
@@ -56,11 +72,10 @@
   opacity: 0;
 }
 
-.img-container:hover .img_gal {
+.img-container:hover .img_gal, .img-container:hover .img_gal_full {
   transform: scale(1.05);
 }
 
 .img-container:hover .in-img {
   opacity: 1;
 }
-
