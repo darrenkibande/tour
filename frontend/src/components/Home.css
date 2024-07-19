@@ -1,3 +1,15 @@
-.home_container{
-    /* padding: 2rem; */
+ /* xs */
+ @media screen and (max-width: 475px){
+}
+
+ /* sm */
+@media screen and (475px <= width <= 640px){
+}
+
+/* md */
+@media screen and (640px <= width <= 768px){
+}
+
+/* lg */
+@media screen and (768px <= width <= 1280px){
 }

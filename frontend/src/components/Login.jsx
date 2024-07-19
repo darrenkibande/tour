@@ -1,39 +1,48 @@
-import React from 'react'
-import './Login.css'
-import { Link } from 'react-router-dom';
+// LoginForm.js
+import React, { useState } from 'react';
+import { FaEye } from 'react-icons/fa';
+// import { FaGoogle, FaApple, FaMicrosoft } from 'react-icons/fa';
+import './Login.css';
 
-import { FaApple } from "react-icons/fa6";
-import { FcGoogle } from "react-icons/fc";
+const Login = () => {
+  const [passwordVisible, setPasswordVisible] = useState(false);
 
-function Login() {
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
+
   return (
-    <div className="login-cont">
-    <div className="custom-form-container">
-    <p className="custom-title">Welcome Back</p>
-    <form className="custom-form">
-      <input type="email" className="custom-input" placeholder="Email" />
-      <input type="password" className="custom-input" placeholder="Password" />
-      <p className="custom-page-link">
-        <span className="custom-page-link-label">Forgot Password?</span>
-      </p>
-      <button className="custom-form-btn">Log in</button>
-    </form>
-    <p className="custom-sign-up-label">
-      Don't have an account? <Link to='/Register'><span className="custom-sign-up-link">Sign up</span></Link>
-    </p>
-    <div className="custom-buttons-container">
-      <div className="custom-apple-login-button">
-        <FaApple/>
-        <span>Log in with Apple</span>
+    <div className="login-form">
+      <p className='title-secondary' style={{textAlign:"center"}}>Login</p>
+      <form>
+        <div className="form-group">
+          <input type="text" name="username" required />
+          <label>Username or Email address*</label>
+        </div>
+        <div className="form-group">
+          <div className="password-input">
+            <input type={passwordVisible ? "text" : "password"} name="password" required />
+            <label>Password*</label>
+            <FaEye onClick={togglePasswordVisibility} className="eye-icon" />
+          </div>
+        </div>
+        <div className="forgot-password">
+          <a href="/forgot-password">Forgot password?</a>
+        </div>
+        <button type="submit" className="btn-continue">Continue</button>
+      </form>
+      <div className="signup-link">
+        <span>Don't have an account? </span>
+        <a href="/Register">Sign up</a>
       </div>
-      <div className="custom-google-login-button">
-        <FcGoogle/>
-        <span>Log in with Google</span>
-      </div>
+      {/* <div className="separator">OR</div>
+      <div className="social-login">
+        <button className="btn-social google"><FaGoogle /> Continue with Google</button>
+        <button className="btn-social apple"><FaApple /> Continue with Apple</button>
+        <button className="btn-social microsoft"><FaMicrosoft /> Continue with Microsoft Account</button>
+      </div> */}
     </div>
-  </div>
-  </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

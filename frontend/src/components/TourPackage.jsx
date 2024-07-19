@@ -5,6 +5,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Newsletter from './Newsletter';
 import { CiClock2 } from 'react-icons/ci';
+import { IoPricetagsOutline } from "react-icons/io5";
+import { CiStar } from "react-icons/ci";
+import { IoPersonOutline  } from "react-icons/io5";
 
 const Tabs = ({ tour }) => {
   const [activeTab, setActiveTab] = useState('information');
@@ -131,32 +134,43 @@ function TourPackage() {
           <div className="image-holder">
             <img src={`http://localhost:8080/${tour.image_preview }`} alt={tour.destination_name} className="img-package" />
           </div>
+          <div className="package-titles">
           <p>{tour.destination_name}</p>
-          <p>{tour.title || 'No title'}</p>          
+          <p>{tour.title || 'No title'}</p>
+          </div>
+                    
           <hr style={{ margin: '20px 0', backgroundColor: '#ccc', border: 'none', height: '1px' }} />
 
           <div className="info-breaker">
-            <div className="package-icons">
-              <CiClock2 />
-              <p>Duration</p>
-              <p>{tour.duration} days</p>
-            </div>
-            <div className="package-icons">
-              <CiClock2 />
-              <p>Price</p>
-              <p>${tour.price}</p>
-            </div>
-            <div className="package-icons">
-              <CiClock2 />
-              <p>Rating</p>
-              <p>{tour.rating || 'N/A'}</p>
-            </div>
-            <div className="package-icons">
-              <CiClock2 />
-              <p>Category</p>
-              <p>{tour.category || 'N/A'}</p>
-            </div>
-          </div>
+      <div className="package-icons">
+        <CiClock2 className='icon-package'/>
+        <div>
+          <p className='title-primary' style={{fontSize:"18px"}}>Duration</p>
+          <p className='txt_p'>{tour.duration} days</p>
+        </div>
+      </div>
+      <div className="package-icons">
+        <IoPricetagsOutline  className='icon-package'/>
+        <div>
+          <p className='title-primary' style={{fontSize:"18px"}}>Price</p>
+          <p className='txt_p'>${tour.price}</p>
+        </div>
+      </div>
+      <div className="package-icons">
+        <CiStar className='icon-package'/>
+        <div>
+          <p className='title-primary' style={{fontSize:"18px"}}>Rating</p>
+          <p className='txt_p'>8K+ </p>
+        </div>
+      </div>
+      <div className="package-icons">
+        <IoPersonOutline  className='icon-package'/>
+        <div>
+          <p className='title-primary' style={{fontSize:"18px"}}>Age</p>
+          <p className='txt_p'>2+</p>
+        </div>
+      </div>
+    </div>
 
           <hr style={{ margin: '20px 0', backgroundColor: '#ccc', border: 'none', height: '1px' }} />
 

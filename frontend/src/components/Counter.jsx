@@ -16,9 +16,15 @@ function Counter() {
         const target = +counter.getAttribute('data-target');
         const count = +counter.innerText;
         const increment = target / 200;
+        let delay = 50; // Default delay
+
+        if (target < 20) {
+          delay = 200; // Increase delay for numbers less than 20
+        }
+
         if (count < target) {
           counter.innerText = `${Math.ceil(count + increment)}`;
-          setTimeout(updateCounter, 50); // Increase the delay to slow down the counter
+          setTimeout(updateCounter, delay);
         } else counter.innerText = target;
       };
       updateCounter();

@@ -55,3 +55,88 @@
     color: var(--black);
     line-height: 30px;
 }
+
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 450px) {
+    .logo-title{
+        font-size: 17px;
+        font-weight: 300;
+        font-family: 'Bruno Ace', sans-serif;
+    }
+
+    .nav-container{
+        justify-content: flex-start space-between;
+        /* height: 10vh; */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: var(--neutral200);
+        z-index: 4;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-icons {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 1rem;
+        /* background: yellow; */
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .ul-links {
+        flex-direction: column;
+    }
+
+    .li-links {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .drop-menu {
+        position: relative;
+        width: 100%;
+    }
+
+    .drop-menu > span {
+        cursor: pointer;
+    }
+
+    .dropdown {
+        position: static;
+        display: none;
+        text-decoration: none;
+        list-style: none;
+        background: var(--white);
+        padding: 1rem;
+        transition: display 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for dropdown */
+    }
+
+    .drop-menu:hover > .dropdown {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 10; /* Ensure dropdown appears above other content */
+    }
+}

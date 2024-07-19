@@ -1,66 +1,50 @@
+// SignUpForm.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Register.css'; // Import CSS for styling
+import { FaEye } from 'react-icons/fa';
+// import { FaGoogle, FaApple, FaMicrosoft } from 'react-icons/fa';
+import './Register.css';
 
-function Register() {
-  const [formData, setFormData] = useState({
-    firstname: '',
-    lastname: '',
-    email: '',
-    password: '',
-    confirmPassword: ''
-  });
+const Register = () => {
+  const [passwordVisible, setPasswordVisible] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
   };
 
   return (
-    <div className="register-cont">
-    <form className="registration-form" onSubmit={handleSubmit}>
-      <p className="reg-title">Register</p>
-      <p className="message">Signup now and get full access to our app.</p>
-      <div className="flex">
-        <label>
-          <input required placeholder=" " type="text" className="input" name="firstname" value={formData.firstname} onChange={handleChange}  />
-          <span>Firstname</span>
-        </label>
+    <div className="sign-up-form">
+      <p className='title-secondary' style={{textAlign:"center"}}>Sign up</p>
 
-        <label>
-          <input required placeholder=" " type="text" className="input" name="lastname" value={formData.lastname} onChange={handleChange}  />
-          <span>Lastname</span>
-        </label>
+      <form>
+        <div className="form-group">
+          <input type="text" name="email" required />
+          <label>Email address*</label>
+        </div>
+        <div className="form-group">
+          <input type="text" name="username" required />
+          <label>Username*</label>
+        </div>
+        <div className="form-group">
+          <div className="password-input">
+            <input type={passwordVisible ? "text" : "password"} name="password" required />
+            <label>Password*</label>
+            <FaEye onClick={togglePasswordVisibility} className="eye-icon" />
+          </div>
+        </div>
+        <button type="submit" className="btn-continue">Continue</button>
+      </form>
+      <div className="login-link">
+        <span>Already have an account? </span>
+        <a href="/login">Log in</a>
       </div>
-
-      <label>
-        <input required placeholder=" " type="email" className="input" name="email" value={formData.email} onChange={handleChange}  />
-        <span>Email</span>
-      </label>
-
-      <label>
-        <input required placeholder=" " type="password" className="input" name="password" value={formData.password} onChange={handleChange}  />
-        <span>Password</span>
-      </label>
-      <label>
-        <input required placeholder=" " type="password" className="input" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange}  />
-        <span>Confirm password</span>
-      </label>
-      <button type="submit" className="submit">Submit</button>
-      <p className="signin">Already have an account? <Link to='/Login'> Sign in </Link>  </p>
-
-    </form>
+      {/* <div className="separator">OR</div>
+      <div className="social-login">
+        <button className="btn-social google"><FaGoogle /> Continue with Google</button>
+        <button className="btn-social apple"><FaApple /> Continue with Apple</button>
+        <button className="btn-social microsoft"><FaMicrosoft /> Continue with Microsoft Account</button>
+      </div> */}
     </div>
   );
-}
+};
 
 export default Register;
