@@ -10,14 +10,47 @@ exports.getAllTours = async (req, res) => {
     }
 };
 
-
-
 // Create a new tour
 exports.createTour = async (req, res) => {
-    const { destination_name, description, duration, price } = req.body;
+    const {
+        destination_title,
+        destination_name,
+        description,
+        duration,
+        price,
+        info_overview,
+        info_highlight,
+        departure,
+        departure_date,
+        return_date,
+        included,
+        excluded,
+        travel_plan_overview,
+        travel_plan_day_title,
+        travel_plan_time,
+        travel_plan_day_description
+    } = req.body;
     const image_preview = req.file ? req.file.path : null; // Get the file path from Multer
     try {
-        const newTour = await tours.create({ destination_name, description, duration, price, image_preview });
+        const newTour = await tours.create({
+            destination_title,
+            destination_name,
+            description,
+            duration,
+            price,
+            image_preview,
+            info_overview,
+            info_highlight,
+            departure,
+            departure_date,
+            return_date,
+            included,
+            excluded,
+            travel_plan_overview,
+            travel_plan_day_title,
+            travel_plan_time,
+            travel_plan_day_description
+        });
         res.status(201).json(newTour);
     } catch (error) {
         res.status(500).json({ error: 'An error occurred while creating the tour.' });
@@ -27,16 +60,45 @@ exports.createTour = async (req, res) => {
 // Update an existing tour
 exports.updateTour = async (req, res) => {
     const { id } = req.params;
-    const { destination_name, description, duration, price } = req.body;
+    const {
+        destination_title,
+        destination_name,
+        description,
+        duration,
+        price,
+        info_overview,
+        info_highlight,
+        departure,
+        departure_date,
+        return_date,
+        included,
+        excluded,
+        travel_plan_overview,
+        travel_plan_day_title,
+        travel_plan_time,
+        travel_plan_day_description
+    } = req.body;
     const image_preview = req.file ? req.file.path : req.body.image_preview; // Update the file path if a new file is uploaded
     try {
         const tour = await tours.findByPk(id);
         if (tour) {
+            tour.destination_title = destination_title;
             tour.destination_name = destination_name;
             tour.description = description;
             tour.duration = duration;
             tour.price = price;
             tour.image_preview = image_preview;
+            tour.info_overview = info_overview;
+            tour.info_highlight = info_highlight;
+            tour.departure = departure;
+            tour.departure_date = departure_date;
+            tour.return_date = return_date;
+            tour.included = included;
+            tour.excluded = excluded;
+            tour.travel_plan_overview = travel_plan_overview;
+            tour.travel_plan_day_title = travel_plan_day_title;
+            tour.travel_plan_time = travel_plan_time;
+            tour.travel_plan_day_description = travel_plan_day_description;
             await tour.save();
             res.status(200).json(tour);
         } else {
