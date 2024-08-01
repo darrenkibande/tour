@@ -46,7 +46,7 @@ function Navbar() {
       <div className="nav-icons">
         <ul className='ul-links'>
         <Link className='li-links'><li> <IoIosSearch className="nav-icon"/></li></Link>
-        <Link className='li-links' to='/Register'><li> <VscAccount className="nav-icon"/></li></Link>
+        <Link className='li-links' to='/register'><li> <VscAccount className="nav-icon"/></li></Link>
         <li className='hamburger-menu' onClick={toggleMenu}>
             {isMenuOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
           </li>

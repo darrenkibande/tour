@@ -63,7 +63,7 @@ const Register = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:8080/users', {
+      const response = await fetch('http://localhost:8080/users/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -71,23 +71,14 @@ const Register = () => {
         body: JSON.stringify(formData)
       });
 
-      // Log the response status and headers for debugging
-      console.log('Response Status:', response.status);
-      console.log('Response Headers:', response.headers);
-
-      // Check for non-JSON responses (e.g., HTML error pages)
-      const contentType = response.headers.get('content-type');
-      if (!contentType || !contentType.includes('application/json')) {
-        throw new Error('Received unexpected content type');
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to register user');
       }
 
       const data = await response.json();
+      console.log(data);
 
-      if (!response.ok) {
-        throw new Error(data.error || 'Something went wrong');
-      }
-
-      // Successful response from server
       setSuccess('User registered successfully');
       setFormData({ email: '', username: '', password: '', phonenumber: '' });
       setError('');
@@ -105,7 +96,7 @@ const Register = () => {
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <input
-            type="text"
+            type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}

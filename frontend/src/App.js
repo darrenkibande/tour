@@ -30,9 +30,9 @@ function App() {
       <Routes>
         <Route index element={<Home/>}></Route>
         <Route exact path='/home' element={<Home/>}></Route>
-        <Route exact path='/Register' element={<Register/>}></Route>
+        <Route exact path='/register' element={<Register/>}></Route>
         <Route exact path='/What we offer' element={<Offer/>}></Route>
-        <Route exact path='/Login' element={<Login/>}></Route>
+        <Route exact path='/login' element={<Login/>}></Route>
         <Route exact path='/Faq' element={<FAQ/>}></Route>
         <Route exact path='/Contact us' element={<ContactUs/>}></Route>
         <Route exact path='/About us' element={<AboutUs/>}></Route>
