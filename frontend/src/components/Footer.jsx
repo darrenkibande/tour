@@ -27,6 +27,7 @@ function Footer() {
     </ul>
     </div>
 
+    {/* <div className="sm-row"> */}
     <div className="mid-side">
     <span className='ft-txt'>Useful links</span>
     <ul className='ul-ftlinks'>
@@ -46,6 +47,7 @@ function Footer() {
       <li className='li-ftlinks'><IoLocationOutline className='icon-oth'/> Kisumu, Kenya</li>
     </ul>
     </div>
+    {/* </div> */}
 
     </div>
 

@@ -104,3 +104,33 @@ input[type="email"]:valid + label {
   text-decoration: none;
 }
 
+ /* xs */
+ @media screen and (max-width: 475px){
+  
+.sign-up-form {
+  width: 90%;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 6rem;
+  /* margin-bottom: 3rem; */
+}
+.form-group {
+  width: 100%; /* Set the width to 250px */
+  position: relative;
+  margin-bottom: 5px; 
+}
+
+}
+
+ /* sm */
+@media screen and (475px <= width <= 640px){
+}
+
+/* md */
+@media screen and (640px <= width <= 768px){
+}
+
+/* lg */
+@media screen and (768px <= width <= 1280px){
+}
+
