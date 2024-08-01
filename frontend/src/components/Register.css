@@ -1,8 +1,8 @@
-/* SignUpForm.css */
+
 .sign-up-form {
-  width: 320px;
+  width: 350px;
   margin: 0 auto;
-  padding: 40px;
+  padding:10px 40px;
   border: none;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -11,37 +11,28 @@
   margin-bottom: 3rem;
 }
 
+.register-form{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
 .form-group {
+  width: 100%; /* Set the width to 250px */
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Adjust spacing if needed */
 }
 
 input[type="text"],
-input[type="password"] {
-  width: 100%;
+input[type="password"],
+input[type="email"] {
+  width: 100%; /* Ensure inputs fill the width of .form-group */
   padding: 12px 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 16px;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-  outline: none;
-  border-color: #ff6600;
-}
-
-input[type="text"]:focus + label,
-input[type="password"]:focus + label,
-input[type="text"]:valid + label,
-input[type="password"]:valid + label {
-  top: -8px;
-  left: 10px;
-  font-size: 12px;
-  background-color: #fff;
-  padding: 0 5px;
-  color: #ff6600;
 }
 
 label {
@@ -53,6 +44,28 @@ label {
   pointer-events: none;
   transition: 0.2s ease all;
 }
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border-color: #ff6600;
+}
+
+input[type="text"]:focus + label,
+input[type="password"]:focus + label,
+input[type="email"]:focus + label,
+input[type="text"]:valid + label,
+input[type="password"]:valid + label,
+input[type="email"]:valid + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  background-color: #fff;
+  padding: 0 5px;
+  color: #ff6600;
+}
+
 
 .password-input {
   position: relative;
@@ -82,74 +95,12 @@ label {
 .login-link {
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 5px;
   font-size: 14px;
 }
 
-.login-link a {
+.l-link {
   color: #007bff;
   text-decoration: none;
 }
 
-.separator {
-  text-align: center;
-  margin: 20px 0;
-  position: relative;
-  font-size: 14px;
-  color: #888;
-}
-
-.separator::before,
-.separator::after {
-  content: "";
-  display: inline-block;
-  width: 40%;
-  height: 1px;
-  background: #ddd;
-  position: absolute;
-  top: 50%;
-}
-
-.separator::before {
-  left: 0;
-}
-
-.separator::after {
-  right: 0;
-}
-
-.social-login {
-  text-align: center;
-}
-
-.btn-social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background: #fff;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.btn-social svg {
-  margin-right: 8px;
-}
-
-.btn-social.google {
-  color: #db4437;
-  border-color: #db4437;
-}
-
-.btn-social.apple {
-  color: #000;
-  border-color: #000;
-}
-
-.btn-social.microsoft {
-  color: #00a4ef;
-  border-color: #00a4ef;
-}

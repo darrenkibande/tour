@@ -1,7 +1,7 @@
 .login-form {
-  width: 320px;
+  width: 350px;
   margin: 0 auto;
-  padding: 40px;
+  padding:10px 40px;
   border: none;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -11,8 +11,16 @@
 }
 
 .form-group {
+  width: 100%;
   position: relative;
-  margin-bottom: 1px; /* Adjusted spacing */
+  margin-bottom: 10px; 
+}
+
+.loginform-sect{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 
 input[type="text"],
@@ -100,66 +108,3 @@ label {
   text-decoration: none;
 }
 
-.separator {
-  text-align: center;
-  margin: 5px 0; /* Adjusted spacing */
-  position: relative;
-  font-size: 14px;
-  color: #888;
-}
-
-.separator::before,
-.separator::after {
-  content: "";
-  display: inline-block;
-  width: 40%;
-  height: 1px;
-  background: #ddd;
-  position: absolute;
-  top: 50%;
-}
-
-.separator::before {
-  left: 0;
-}
-
-.separator::after {
-  right: 0;
-}
-
-.social-login {
-  text-align: center;
-}
-
-.btn-social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 5px; /* Adjusted spacing */
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background: #fff;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.btn-social svg {
-  margin-right: 8px;
-}
-
-.btn-social.google {
-  color: #db4437;
-  border-color: #db4437;
-}
-
-.btn-social.apple {
-  color: #000;
-  border-color: #000;
-}
-
-.btn-social.microsoft {
-  color: #00a4ef;
-  border-color: #00a4ef;
-}

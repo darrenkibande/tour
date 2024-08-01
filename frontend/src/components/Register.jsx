@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaEye } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './Register.css';
 
 const Register = () => {
@@ -93,7 +94,7 @@ const Register = () => {
     <div className="sign-up-form">
       <p className='title-secondary' style={{ textAlign: "center" }}>Sign up</p>
 
-      <form onSubmit={handleSubmit}>
+      <form className='register-form' onSubmit={handleSubmit}>
         <div className="form-group">
           <input
             type="email"
@@ -143,7 +144,7 @@ const Register = () => {
       </form>
       <div className="login-link">
         <span>Already have an account? </span>
-        <a href="/login">Log in</a>
+        <Link className='l-link' to='/login'><span>Login</span></Link>
       </div>
     </div>
   );

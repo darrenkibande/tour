@@ -1,6 +1,6 @@
-// LoginForm.js
 import React, { useState } from 'react';
 import { FaEye } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
@@ -79,7 +79,7 @@ const Login = () => {
     <div className="login-form">
       <p className='title-secondary' style={{ textAlign: "center" }}>Login</p>
 
-      <form onSubmit={handleSubmit}>
+      <form className='loginform-sect' onSubmit={handleSubmit}>
         <div className="form-group">
           <input
             type="email"
@@ -112,7 +112,7 @@ const Login = () => {
       </form>
       <div className="signup-link">
         <span>Don't have an account? </span>
-        <a href="/register">Sign up</a>
+        <Link className='l-link' to='/register'><span>Sign up</span></Link>
       </div>
     </div>
   );
