@@ -34,6 +34,7 @@ function Footer() {
       <Link className='li-ftlinks' to='/About us'><li>About</li></Link>
       <Link className='li-ftlinks' to='/Blogs'><li>Blog</li></Link>
       <Link className='li-ftlinks' to='/Contact us'><li>Contact</li></Link>
+      <Link className='li-ftlinks' to='/AdminMenu'><li>Staff</li></Link>
     </ul>
     </div>
 

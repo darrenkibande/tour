@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './AdminTour.css';
 
 function AdminTour() {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     destination_title: '',
     destination_name: '',
     description: '',
@@ -20,31 +20,13 @@ function AdminTour() {
     travel_plan_day_title: '',
     travel_plan_time: '',
     travel_plan_day_description: ''
-  });
-  
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
   const [currentTab, setCurrentTab] = useState(1);
 
   useEffect(() => {
-    // Reset form data when the component mounts
-    setFormData({
-      destination_title: '',
-      destination_name: '',
-      description: '',
-      duration: '',
-      price: '',
-      image_preview: null,
-      info_overview: '',
-      info_highlight: '',
-      departure: '',
-      departure_date: '',
-      return_date: '',
-      included: '',
-      excluded: '',
-      travel_plan_overview: '',
-      travel_plan_day_title: '',
-      travel_plan_time: '',
-      travel_plan_day_description: ''
-    });
+    setFormData(initialFormData);
   }, []);
 
   const handleChange = (e) => {
@@ -79,27 +61,7 @@ function AdminTour() {
         throw new Error('Error uploading tour data');
       }
 
-      // Reset form data after successful upload
-      setFormData({
-        destination_title: '',
-        destination_name: '',
-        description: '',
-        duration: '',
-        price: '',
-        image_preview: null,
-        info_overview: '',
-        info_highlight: '',
-        departure: '',
-        departure_date: '',
-        return_date: '',
-        included: '',
-        excluded: '',
-        travel_plan_overview: '',
-        travel_plan_day_title: '',
-        travel_plan_time: '',
-        travel_plan_day_description: ''
-      });
-
+      setFormData(initialFormData);
       alert('Tour uploaded successfully!');
     } catch (error) {
       console.error('Error uploading tour data:', error);

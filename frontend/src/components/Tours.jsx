@@ -64,7 +64,7 @@ function Tours() {
 
               <h3 className="card__title">
                 <SlLocationPin className='icon__tour' />
-                {tour.destination_name}
+                {tour.destination_title}, {tour.destination_name} 
               </h3>
               <p className='txt_cont'>{tour.description}</p>
               <div className="card__details">

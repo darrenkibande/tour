@@ -16,10 +16,16 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+// Get all tours
 router.get('/', tourController.getAllTours);
-// router.get('/:id', tourController.getTourById);
-router.post('/', upload.single('image_preview'), tourController.createTour); // Add multer middleware here
-// router.put('/:id', upload.single('image'), tourController.updateTour); 
-// router.delete('/:id', tourController.deleteTour);
+
+// Create a new tour
+router.post('/', upload.single('image_preview'), tourController.createTour);
+
+// Update an existing tour
+router.put('/:id', upload.single('image_preview'), tourController.updateTour);
+
+// Delete a tour
+router.delete('/:id', tourController.deleteTour);
 
 module.exports = router;

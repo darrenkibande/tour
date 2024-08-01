@@ -12,3 +12,233 @@
     background-size: cover;
     background-position: center;
 }
+
+.blog-header{
+    
+    /* background: green; */
+    /* padding-top: 1rem; */
+    /* padding-bottom: 1rem; */
+}
+
+.blog-container-top{
+  max-width: 100%;
+    display: grid;
+    /* background: gold; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px; 
+    grid-column-gap: 30px;
+    /* padding-left: 35px; */
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+
+.blog-heading{
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  font-size: 3.5rem;
+    font-family: 'Square Peg', cursive;
+    font-weight: 600;
+    color: var(--green700);
+}
+
+.card_blog {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    color: #2e2d31;
+    background: #131313;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  .card_blog_title {
+    font-weight: bold;
+    padding-right: 10px;
+  }
+  
+  .card_blog_content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+    padding: 30px;
+    /* background: gold; */
+    background: #f2f2f2;
+    border-top-left-radius: 20px;
+    transform: translateY(150px);
+    transition: transform .25s;
+  }
+  
+  .card_blog_content::before {
+    content: '';
+    position: absolute;
+    top: -47px;
+    right: -45px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-175deg);
+    border-radius: 50%;
+    box-shadow: inset 48px 48px #f2f2f2;
+  }
+  
+  .card_blog_title {
+    color: #131313;
+    line-height: 15px;
+  }
+  
+  .card_blog_subtitle {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .card_blog_description {
+    font-size: 14px;
+    opacity: 0;
+    text-align: justify;
+    padding-right: 40px;
+    transition: opacity .5s;
+  }
+  
+  .card_blog:hover .card_blog_content {
+    transform: translateY(0);
+  }
+  
+  .card_blog:hover .card_blog_description {
+    opacity: 1;
+    transition-delay: .25s;
+  }
+
+  .temporary_text{
+    width: 100%;
+  }
+
+  .temporary_text img{
+    max-width: 100%;
+  }
+  
+    /* xs */
+@media screen and (max-width: 475px){
+  .blog-header{
+    padding: 0;
+  }
+
+  .blog-container-top{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card_blog{
+      width: 350px;
+      height: 450px;
+    }
+  }
+
+
+}
+
+  /* sm */
+@media screen and (max-width: 520px){
+  .blog-header{
+    padding: 0;
+  }
+
+  .blog-container-top{
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card_blog{
+      width: 100%;
+      flex-grow: 1;
+      /* width: 350px;
+      height: 450px; */
+    }
+  }
+
+}
+
+/* md */
+@media screen and (521px <= width <= 768px){
+  .blog-header{
+    padding: 0;
+    justify-content: center;
+  }
+
+  .blog-container-top{
+    max-width: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+
+    .card_blog{
+      /* flex-grow: 1; */
+      width: 100%;
+      /* height: 400px; */
+    }
+  }
+
+}
+
+/* lg */
+@media screen and (768px <= width <= 1024px){
+  .blog-header{
+    padding: 0;
+    justify-content: center;
+  }
+
+  .blog-container-top{
+    max-width: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 1rem;
+    margin-left: 50px;
+
+    .card_blog{
+      flex-grow: 1;
+      width: 100%;
+      /* width: 350px;
+      height: 450px; */
+    }
+  }
+}
+
+/* xl */
+@media screen and ( 1024px <= width <=  1280px){
+  .blog-header{
+    padding: 0;
+    justify-content: center;
+  }
+
+  .blog-container-top{
+    max-width: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 1rem;
+    margin-left: 50px;
+
+    .card_blog{
+      width: 100%;
+      flex-grow: 1;
+      /* height: 500px; */
+    }
+  }
+}
+
+/* 2xl */
+@media screen and (max-width: 1536px){
+  
+}

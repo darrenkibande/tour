@@ -16,6 +16,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // Routes
 app.use('/destinations', destinationsRouter);
 app.use('/tours', tourRouter);
+
 // app.use('/api/other', otherRoutes);
 
 const PORT = process.env.PORT || 8080;

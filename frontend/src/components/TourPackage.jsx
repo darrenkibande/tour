@@ -7,7 +7,7 @@ import Newsletter from './Newsletter';
 import { CiClock2 } from 'react-icons/ci';
 import { IoPricetagsOutline } from "react-icons/io5";
 import { CiStar } from "react-icons/ci";
-import { IoPersonOutline  } from "react-icons/io5";
+import { IoPersonOutline } from "react-icons/io5";
 
 const Tabs = ({ tour }) => {
   const [activeTab, setActiveTab] = useState('information');
@@ -18,36 +18,44 @@ const Tabs = ({ tour }) => {
         return (
           <div>
             <h2>Overview</h2>
-            <p>{tour.overview || 'No overview available.'}</p>
+            <p>{tour.overview}</p>
             <h2>Highlight</h2>
-            {(tour.highlights || []).map((highlight, index) => (
-              <p key={index}>{highlight}</p>
-            ))}
+            {Array.isArray(tour.highlights) && tour.highlights.length > 0 ? (
+              tour.highlights.map((highlight, index) => (
+                <p key={index}>{highlight}</p>
+              ))
+            ) : (
+              <p>No highlights available</p>
+            )}
             <table>
               <tbody>
                 <tr>
                   <th>Destination</th>
-                  <td>{tour.destination || 'N/A'}</td>
+                  <td>{tour.destination}</td>
                 </tr>
                 <tr>
                   <th>Departure</th>
-                  <td>{tour.departure || 'N/A'}</td>
+                  <td>{tour.departure}</td>
                 </tr>
                 <tr>
                   <th>Departure Time</th>
-                  <td>{tour.departure_time || 'N/A'}</td>
+                  <td>{tour.departure_time}</td>
                 </tr>
                 <tr>
                   <th>Return Time</th>
-                  <td>{tour.return_time || 'N/A'}</td>
+                  <td>{tour.return_time}</td>
                 </tr>
                 <tr>
                   <th>Included</th>
                   <td>
                     <ul>
-                      {(tour.included || []).map((item, index) => (
-                        <li key={index}>{item}</li>
-                      ))}
+                      {Array.isArray(tour.included) && tour.included.length > 0 ? (
+                        tour.included.map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))
+                      ) : (
+                        <li>No items included</li>
+                      )}
                     </ul>
                   </td>
                 </tr>
@@ -55,9 +63,13 @@ const Tabs = ({ tour }) => {
                   <th>Excluded</th>
                   <td>
                     <ul>
-                      {(tour.excluded || []).map((item, index) => (
-                        <li key={index}>{item}</li>
-                      ))}
+                      {Array.isArray(tour.excluded) && tour.excluded.length > 0 ? (
+                        tour.excluded.map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))
+                      ) : (
+                        <li>No items excluded</li>
+                      )}
                     </ul>
                   </td>
                 </tr>
@@ -69,27 +81,39 @@ const Tabs = ({ tour }) => {
         return (
           <div>
             <h2>Travel Plan</h2>
-            {(tour.travel_plan || []).map((day, index) => (
-              <div key={index}>
-                <h3>{day.title || 'No title'}</h3>
-                <p>{day.time || 'No time specified'}</p>
-                <p>{day.description || 'No description available'}</p>
-                <ul>
-                  {(day.details || []).map((detail, i) => (
-                    <li key={i}>{detail}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {Array.isArray(tour.travel_plan) && tour.travel_plan.length > 0 ? (
+              tour.travel_plan.map((day, index) => (
+                <div key={index}>
+                  <h3>{day.title}</h3>
+                  <p>{day.time}</p>
+                  <p>{day.description}</p>
+                  <ul>
+                    {Array.isArray(day.details) && day.details.length > 0 ? (
+                      day.details.map((detail, i) => (
+                        <li key={i}>{detail}</li>
+                      ))
+                    ) : (
+                      <li>No details available</li>
+                    )}
+                  </ul>
+                </div>
+              ))
+            ) : (
+              <p>No travel plan available</p>
+            )}
           </div>
         );
       case 'gallery':
         return (
           <div>
             <h2>Gallery</h2>
-            {(tour.gallery || []).map((image, index) => (
-              <img key={index} src={image} alt={`gallery-${index}`} />
-            ))}
+            {Array.isArray(tour.gallery) && tour.gallery.length > 0 ? (
+              tour.gallery.map((image, index) => (
+                <img key={index} src={image} alt={`gallery-${index}`} />
+              ))
+            ) : (
+              <p>No images available</p>
+            )}
           </div>
         );
       default:
@@ -132,45 +156,45 @@ function TourPackage() {
       <div className="package_sides">
         <div className="rt_package">
           <div className="image-holder">
-            <img src={`http://localhost:8080/${tour.image_preview }`} alt={tour.destination_name} className="img-package" />
+            <img src={`http://localhost:8080/${tour.image_preview}`} alt={tour.destination_name} className="img-package" />
           </div>
           <div className="package-titles">
-          <p>{tour.destination_name}</p>
-          <p>{tour.title || 'No title'}</p>
+            <p>{tour.destination_name}</p>
+            <p>{tour.title}</p>
           </div>
                     
           <hr style={{ margin: '20px 0', backgroundColor: '#ccc', border: 'none', height: '1px' }} />
 
           <div className="info-breaker">
-      <div className="package-icons">
-        <CiClock2 className='icon-package'/>
-        <div>
-          <p className='title-primary' style={{fontSize:"18px"}}>Duration</p>
-          <p className='txt_p'>{tour.duration} days</p>
-        </div>
-      </div>
-      <div className="package-icons">
-        <IoPricetagsOutline  className='icon-package'/>
-        <div>
-          <p className='title-primary' style={{fontSize:"18px"}}>Price</p>
-          <p className='txt_p'>${tour.price}</p>
-        </div>
-      </div>
-      <div className="package-icons">
-        <CiStar className='icon-package'/>
-        <div>
-          <p className='title-primary' style={{fontSize:"18px"}}>Rating</p>
-          <p className='txt_p'>8K+ </p>
-        </div>
-      </div>
-      <div className="package-icons">
-        <IoPersonOutline  className='icon-package'/>
-        <div>
-          <p className='title-primary' style={{fontSize:"18px"}}>Age</p>
-          <p className='txt_p'>2+</p>
-        </div>
-      </div>
-    </div>
+            <div className="package-icons">
+              <CiClock2 className='icon-package'/>
+              <div>
+                <p className='title-primary' style={{fontSize:"18px"}}>Duration</p>
+                <p className='txt_p'>{tour.duration} days</p>
+              </div>
+            </div>
+            <div className="package-icons">
+              <IoPricetagsOutline className='icon-package'/>
+              <div>
+                <p className='title-primary' style={{fontSize:"18px"}}>Price</p>
+                <p className='txt_p'>${tour.price}</p>
+              </div>
+            </div>
+            <div className="package-icons">
+              <CiStar className='icon-package'/>
+              <div>
+                <p className='title-primary' style={{fontSize:"18px"}}>Rating</p>
+                <p className='txt_p'>8K+ </p>
+              </div>
+            </div>
+            <div className="package-icons">
+              <IoPersonOutline className='icon-package'/>
+              <div>
+                <p className='title-primary' style={{fontSize:"18px"}}>Age</p>
+                <p className='txt_p'>2+</p>
+              </div>
+            </div>
+          </div>
 
           <hr style={{ margin: '20px 0', backgroundColor: '#ccc', border: 'none', height: '1px' }} />
 
