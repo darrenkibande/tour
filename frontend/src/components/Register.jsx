@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaEye } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './Register.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Register = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
@@ -91,7 +99,7 @@ const Register = () => {
   };
 
   return (
-    <div className="sign-up-form">
+    <div data-aos="zoom-in" className="sign-up-form">
       <p className='title-secondary' style={{ textAlign: "center" }}>Sign up</p>
 
       <form className='register-form' onSubmit={handleSubmit}>

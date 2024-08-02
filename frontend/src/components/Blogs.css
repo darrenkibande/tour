@@ -1,43 +1,34 @@
-.blog-sect{
-    position: relative;
-    margin-top: 3rem;
-    height: 20rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    background: url("../assets/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
-    background-attachment: fixed;
-    background-blend-mode: color;
-    background-size: cover;
-    background-position: center;
-}
+.banner-blog{
+  position: relative;
+  margin-top: 3rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.blog-header{
-    
-    /* background: green; */
-    /* padding-top: 1rem; */
-    /* padding-bottom: 1rem; */
+  background: url("../assets/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
+  background-attachment: fixed;
+  background-blend-mode: color;
+  background-size: cover;
+  background-position: center;
 }
 
 .blog-container-top{
   max-width: 100%;
     display: grid;
-    /* background: gold; */
+    margin-top: 2rem;
+    margin-bottom: 3rem;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 30px; 
     grid-column-gap: 30px;
-    /* padding-left: 35px; */
     padding-left: 4rem;
     padding-right: 4rem;
 }
-
 
 .blog-heading{
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
-
   font-size: 3.5rem;
     font-family: 'Square Peg', cursive;
     font-weight: 600;

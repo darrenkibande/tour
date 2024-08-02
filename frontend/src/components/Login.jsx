@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaEye } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './Login.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Login = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
@@ -76,7 +85,7 @@ const Login = () => {
   };
 
   return (
-    <div className="login-form">
+    <div data-aos="zoom-in" className="login-form">
       <p className='title-secondary' style={{ textAlign: "center" }}>Login</p>
 
       <form className='loginform-sect' onSubmit={handleSubmit}>

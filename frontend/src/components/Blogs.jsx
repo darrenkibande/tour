@@ -13,16 +13,22 @@ import blog6 from '../assets/alex-boyd-HA0Rgl-ISko-unsplash.jpg'
 import Newsletter from './Newsletter';
 
 function Blog() {
+
   useEffect(() =>{
   AOS.init();
   AOS.refresh();
   window.scrollTo(0,0);
 },[]);
+
   return ( 
    <div className="blog-header">
-    <div className="blog-sect" data-aos="fade-up">
-      <span>Latest In The Blogs</span>
-    </div>
+    
+    <div className="banner-blog">
+        <div className="banner-sect">
+          <p className='banner-title'>Latest In The Blogs</p>
+        </div>
+      </div>
+
     <div className="blog-container-top" data-aos="zoom-in-up">      
 
     <div class="card_blog">

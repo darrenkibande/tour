@@ -3,7 +3,7 @@ import './AboutUs.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Newsletter from './Newsletter';
-import img1 from '../assets/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg'
+import img1 from '../assets/alex-boyd-HA0Rgl-ISko-unsplash.jpg'
 
 function AboutUs() {
   useEffect(() => {
@@ -24,19 +24,19 @@ function AboutUs() {
     <p data-aos="fade-up" className='txt_p'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus totam, fuga est rem veritatis corporis dolorum? Repellat asperiores nostrum alias deserunt reprehenderit autem doloremque et, saepe itaque, rem ipsam? Minus?</p>
 
     <div className="about-grid">
-        <div data-aos="fade-left" className="content-grid">
-            <img src={img1} alt="" className='img_gal'/>
+        <div data-aos="fade-left" className="about-content-grid">
+            <img src={img1} alt="" className='img_aboutus'/>
         </div>
-        <div data-aos="fade-right"className="content-grid">
+        <div data-aos="fade-right"className="about-content-grid">
           <p className='title-primary'>Lorem ipsum dolor.</p>
             <p className='txt_p'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quia officiis placeat iure, laboriosam in consectetur cum eveniet delectus harum deserunt, autem totam rerum magnam saepe sint ullam tenetur voluptas dolor qui! Debitis, quos deserunt. Soluta quasi, tenetur laborum eos excepturi sequi aliquid et alias exercitationem error enim? Nesciunt, corrupti.</p>
         </div>
-        <div data-aos="fade-right" className="content-grid">
+        <div data-aos="fade-right" className="about-content-grid">
         <p className='title-primary'>Lorem ipsum dolor.</p>
             <p className='txt_p'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, illum itaque. Temporibus perspiciatis, vero consequatur dolor, praesentium dolorem quae laudantium odio, illo non quis aperiam! Sint nihil, repellat praesentium architecto earum alias molestiae magni suscipit at sit quos similique velit quis aliquid ratione voluptatem. Maxime, tempore commodi. Porro, vitae mollitia.</p>
         </div>
-        <div data-aos="fade-left" className="content-grid">
-        <img src={img1} alt="" className='img_gal' />
+        <div data-aos="fade-left" className="about-content-grid">
+        <img src={img1} alt="" className='img_aboutus' />
         </div>
     </div>
 
